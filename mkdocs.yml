@@ -34,7 +34,7 @@ theme:
   language: 'zh'
   name: material
   features:
-    - tabs
+    - navigation.tabs
   icon:
     logo: fontawesome/solid/microchip
     repo: fontawesome/brands/git-alt
