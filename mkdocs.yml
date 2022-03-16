@@ -45,32 +45,32 @@ theme:
 nav:
   - 实验须知: index.md
   - 实验提交说明: ojguide.md
-  - 平方计算: 
-    - 实验概述: lab1/part1.md
-    - 编码规范: lab1/codingstyle.md
-    - 实验原理: lab1/part2.md
-    - 实验准备: lab1/part3.md
-    - 实现步骤: lab1/part4.md
-    - 提交文档: lab1/part5.md
-    - 附录1 IP核使用步骤: lab1/appendix1.md
-    - 附录2 Driver模块设计说明: lab1/appendix2.md
-  - 节日彩灯:
-    - 实验概述: lab2/part1.md
-    - 实验原理: lab2/part2.md
-    - 补充知识: lab2/part3.md
-    - 实验步骤: lab2/part4.md
-    - 测试说明: lab2/part5.md
-    - 提交文档: lab2/part6.md
-    - 附加题 AXI总线: lab2/AXI.md
-  - Booth乘法器:
-    - 实验概述及原理: lab3/part1.md
-    - 实验步骤及提交方式: lab3/part2.md
-    - 选做题A 改进的 Booth 算法: lab3/appendixA.md
-    - 选做题B 基于冗余符号数的 4 位 Booth 算法: lab3/appendixB.md
-  - 直接相连Cache设计:
-    - 实验目的和内容: lab4/part1.md
-    - 实验背景: lab4/part3.md
-    - 实验原理: lab4/part4.md
-    - 实验步骤: lab4/part5.md
-    - 测试: lab4/part6.md
-    - 提交方式与总结: lab4/part7.md
+  #- 平方计算: 
+  #  - 实验概述: lab1/part1.md
+  #  - 编码规范: lab1/codingstyle.md
+  #  - 实验原理: lab1/part2.md
+  #  - 实验准备: lab1/part3.md
+  #  - 实现步骤: lab1/part4.md
+  #  - 提交文档: lab1/part5.md
+  #  - 附录1 IP核使用步骤: lab1/appendix1.md
+  #  - 附录2 Driver模块设计说明: lab1/appendix2.md
+  #- 节日彩灯:
+  #  - 实验概述: lab2/part1.md
+  #  - 实验原理: lab2/part2.md
+  #  - 补充知识: lab2/part3.md
+  #  - 实验步骤: lab2/part4.md
+  #  - 测试说明: lab2/part5.md
+  #  - 提交文档: lab2/part6.md
+  #  - 附加题 AXI总线: lab2/AXI.md
+  #- Booth乘法器:
+  #  - 实验概述及原理: lab3/part1.md
+  #  - 实验步骤及提交方式: lab3/part2.md
+  #  - 选做题A 改进的 Booth 算法: lab3/appendixA.md
+  #  - 选做题B 基于冗余符号数的 4 位 Booth 算法: lab3/appendixB.md
+  #- 直接相连Cache设计:
+  #  - 实验目的和内容: lab4/part1.md
+  #  - 实验背景: lab4/part3.md
+  #  - 实验原理: lab4/part4.md
+  #  - 实验步骤: lab4/part5.md
+  #  - 测试: lab4/part6.md
+  #  - 提交方式与总结: lab4/part7.md
