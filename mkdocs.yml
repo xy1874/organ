@@ -1,7 +1,7 @@
 site_name: 计算机组成原理实验（2022春季） | 哈工大（深圳）
 copyright: 'Copyright &copy; 2019 - 2022 哈尔滨工业大学（深圳）'
 repo_name: 'HITSZ-COMP2008-Course'
-repo_url: 'https://github.com/Bohan-hu/HITSZ-COMP2008-Course'
+repo_url: 'https://https://gitee.com/hitsz-cslab/organ'
 
 markdown_extensions:
   - pymdownx.betterem:
@@ -40,8 +40,8 @@ theme:
     repo: fontawesome/brands/git-alt
     # favicon: fontawesome/solid/microchip
   palette:
-    primary: 'Blue'
-    accent: 'Blue'
+    primary: 'Orange'
+    accent: 'Orange'
 nav:
   - 实验须知: index.md
   - 实验提交说明: ojguide.md
