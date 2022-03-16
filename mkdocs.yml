@@ -1,5 +1,5 @@
-site_name: 计算机组成原理实验（2020春季） | 哈工大（深圳）
-copyright: 'Copyright &copy; 2019 - 2020 哈尔滨工业大学（深圳）'
+site_name: 计算机组成原理实验（2022春季） | 哈工大（深圳）
+copyright: 'Copyright &copy; 2019 - 2022 哈尔滨工业大学（深圳）'
 repo_name: 'HITSZ-COMP2008-Course'
 repo_url: 'https://github.com/Bohan-hu/HITSZ-COMP2008-Course'
 
@@ -45,7 +45,7 @@ theme:
 nav:
   - 实验须知: index.md
   - 实验提交说明: ojguide.md
-  - 直接相联Cache设计: 
+  - 平方计算: 
     - 实验概述: lab1/part1.md
     - 编码规范: lab1/codingstyle.md
     - 实验原理: lab1/part2.md
@@ -54,7 +54,7 @@ nav:
     - 提交文档: lab1/part5.md
     - 附录1 IP核使用步骤: lab1/appendix1.md
     - 附录2 Driver模块设计说明: lab1/appendix2.md
-  - 总线判优控制:
+  - 节日彩灯:
     - 实验概述: lab2/part1.md
     - 实验原理: lab2/part2.md
     - 补充知识: lab2/part3.md
@@ -67,25 +67,10 @@ nav:
     - 实验步骤及提交方式: lab3/part2.md
     - 选做题A 改进的 Booth 算法: lab3/appendixA.md
     - 选做题B 基于冗余符号数的 4 位 Booth 算法: lab3/appendixB.md
-  - 微程序控制器设计:
+  - 直接相连Cache设计:
     - 实验目的和内容: lab4/part1.md
     - 实验背景: lab4/part3.md
     - 实验原理: lab4/part4.md
     - 实验步骤: lab4/part5.md
     - 测试: lab4/part6.md
     - 提交方式与总结: lab4/part7.md
-  - Verilog基本语法: 
-    - 初学Verilog的几点提醒: verilog/part0.md
-    - 模块的基本结构: verilog/part1.md
-    - 标识符和数据类型: verilog/part2.md
-    - 运算符及表达式: verilog/part3.md
-    - 逻辑门的描述: verilog/part4.md
-    - 赋值语句和块语句: verilog/part5.md
-    - 条件语句和循环语句: verilog/part6.md
-    - 模块的调用: verilog/part7.md
-    - 模块的测试: verilog/module_test.md
-    - 4位全加器设计实例: verilog/part8.md
-  - Verilog代码规范: 
-    - 基本规范: codingstyle.md
-  - VSCode编写Verilog使用指南: 
-    - 使用指南: vscodeguide.md
