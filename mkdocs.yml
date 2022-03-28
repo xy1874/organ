@@ -1,7 +1,7 @@
 site_name: 计算机组成原理实验（2022春季） | 哈工大（深圳）
 copyright: 'Copyright &copy; 2020 - 2022 哈尔滨工业大学（深圳）'
 repo_name: 'HITSZ-COMP2008-Course'
-repo_url: 'https://hitsz-cslab.gitee.io/organ'
+repo_url: 'https://gitee.com/hitsz-cslab/organ'
 
 markdown_extensions:
   - pymdownx.betterem:
