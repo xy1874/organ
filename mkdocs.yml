@@ -46,13 +46,11 @@ nav:
   - 实验须知: index.md
   - 实验提交说明: ojguide.md
   - RISC-V汇编实验: 
-    - 实验概述: lab1/part1.md
-  #  - 编码规范: lab1/codingstyle.md
-  #  - 实验原理: lab1/part2.md
-  #  - 实验准备: lab1/part3.md
-  #  - 实现步骤: lab1/part4.md
-  #  - 提交文档: lab1/part5.md
-  #  - 附录1 IP核使用步骤: lab1/appendix1.md
-  #  - 附录2 Driver模块设计说明: lab1/appendix2.md
+    - 实验平台: lab1/part1.md
+    - 实验目的: lab1/part2.md
+    - 实验内容: lab1/part3.md
+    - 实验原理: lab1/part4.md
+    - 实验准备: lab1/part5.md
+    - 实验提交: lab1/part6.md
   #- Booth乘法器设计:
   #- 直接相连Cache设计:

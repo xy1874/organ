@@ -14,7 +14,7 @@
     
     
       
-        <title>实验概述 - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
+        <title>实验平台 - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
       
     
     
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              实验概述
+              实验平台
             
           </span>
         </div>
@@ -330,63 +330,80 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          实验概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        实验概述
+        实验平台
       </a>
       
-        
+    </li>
+  
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part2/" class="md-nav__link">
+        实验目的
+      </a>
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+            
+          
+            
+              
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="../part3/" class="md-nav__link">
+        实验内容
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    实验提交情况统计数据
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    实验前必读！！！！！！
-  </a>
+    <li class="md-nav__item">
+      <a href="../part4/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实验目标
-  </a>
+
+            
+          
+            
+              
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    实验内容
-  </a>
   
-</li>
-      
-    </ul>
   
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../part5/" class="md-nav__link">
+        实验准备
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part6/" class="md-nav__link">
+        实验提交
+      </a>
     </li>
   
 
@@ -419,42 +436,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    实验提交情况统计数据
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    实验前必读！！！！！！
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实验目标
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    实验内容
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -466,41 +447,12 @@
               
                 
                 
-                <h1 id="_1">实验概述</h1>
-<div class="admonition 勘误说明">
-<p class="admonition-title">勘误说明</p>
-<ul>
-<li>实验提供的代码部分，<code>driver.sv</code>文件中，24行注释表述有误，应为“请勿将此行注释”，大家不必理会，不影响实验最终得分。</li>
-<li>"实验原理"部分"地址分解"小节，例子的表述存在问题，已更正。（2020/3/30 下午4:52）</li>
-<li>实验下发项目文件中，<code>cache.v</code>文件第28行中的<code>req_to_mem</code>应为<code>rreq_to_mem</code>，<strong>错误的端口名会造成实例化不正确，导致无法通过测试</strong>，<strong>请自行修改</strong>，端口定义是否为<code>reg</code>类型取决于你的设计，可自由选择。（2020/3/30 上午9:38）</li>
-<li><strong>“实验准备”**部分</strong>"熟悉存储系统“<strong>小节第二段</strong>”连续读取4个块“<strong>应为</strong>”连续读取4个字“**，已更正。（2020/3/30 上午9:20）</li>
-</ul>
-</div>
-<h2 id="_2">实验提交情况统计数据</h2>
-<p>更新时间：<code>2020.4.10 21:30</code></p>
-<ul>
-<li>累计提交：184人</li>
-<li>累计通过：178人</li>
-</ul>
-<p><strong>DDL：2020.4.10 23:59</strong></p>
-<h2 id="_3">实验前必读！！！！！！</h2>
-<p>4.2更新：</p>
-<p>请认真阅读以下说明，严格遵守设计规范，否则将影响成绩。</p>
-<ul>
-<li>禁止使用<code>initial</code>语句！！！！！</li>
-<li>禁止在**模块设计文件（cache.v）**中使用<code># 10</code>或<code>wait</code>语句控制延时！！！！！</li>
-<li>请严格遵守设计规范（二段/三段状态机、同步高电平复位以及**设计规范**中提到的其他内容），确定自己的设计**可综合**，建议进行<code>RUN SYNTHESIS</code>，不报错后再提交，后期将对提交的设计进行统一的综合，<strong>无法综合的将严重影响成绩</strong>！！！（这不是附加要求，凡是遵循规范的代码，都是**可综合的**）</li>
-</ul>
-<h2 id="_4">实验目标</h2>
-<p>掌握直接相联Cache的基本结构及其设计方法，实现直接相连地址映射的机制，读命中和读缺失两种情况的处理。</p>
-<h2 id="_5">实验内容</h2>
-<p>为主存容量2KB的存储系统，设计直接相联Cache，参数如下：</p>
-<ul>
-<li>Cache的总容量为256B</li>
-<li>每块4个字节</li>
-<li>包括64个Cache块</li>
-</ul>
-<p>实现在CPU发出读操作请求后的取数据操作，包括读命中和读缺失两种情况。</p>
+                <h1 id="_1">实验平台</h1>
+<p>Oracle VM VirtualBox/Ubuntu虚拟机</p>
+<p>（虚拟机镜像中集成RISC-V汇编环境）</p>
+<p><strong>下载地址：</strong></p>
+<p>链接：<a href="https://pan.baidu.com/s/1wnrnrb5Jyntl3DntN7J5ZQ">https://pan.baidu.com/s/1wnrnrb5Jyntl3DntN7J5ZQ</a> 
+提取码：l91r</p>
                 
               
               
@@ -534,6 +486,21 @@
           </div>
         </a>
       
+      
+        
+        <a href="../part2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 实验目的" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              实验目的
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
