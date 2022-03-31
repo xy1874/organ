@@ -42,13 +42,18 @@ B、编译
 
 当程序由多个源代码文件构成时，每个文件都要先完成汇编工作，生成.o目标文件后，才能进入下一步的链接工作。注意：目标文件已经是最终程序的某一部分了，但是在链接之前还不能执行。
 
-###### ELF 文件
+**ELF 文件内容：**
 
-ELF Header, 以一个 16byte 的序列开始，描述系统 word 大小、字节顺序等
+ELF Header, 以一个 16byte 的序列开始，描述系统 word 大小、字节顺序等；
+
 .text：text segment, 编译程序的机器代码
+
 .data：已初始化的 global/static C variable, 即源代码的 static 部分。
+
 .symtab：符号表，存放定义、引用的函数、全局变量和不可被 reference 的 static 变量
+
 .debug：调试符号表，包含原始文件; .line 同样，包含行号和 .text 的映射。只有 -g 编译才会产生
+
 .strtab：字符串表，包含定义的 string 和 section 的名字。
 
 #### **1.3** **链接**

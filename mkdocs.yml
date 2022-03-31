@@ -46,7 +46,7 @@ nav:
   - 实验须知: 
     - 实验介绍: index.md
     - 实验提交说明: ojguide.md
-  - RISC-V汇编实验: 
+  - 从C语言到机器码: 
     - 实验平台: lab1/part1.md
     - 实验目的: lab1/part2.md
     - 实验内容: lab1/part3.md
