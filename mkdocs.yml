@@ -49,9 +49,9 @@ nav:
   - 从C语言到机器码: 
     - 实验平台: lab1/part1.md
     - 实验目的: lab1/part2.md
-    - 实验内容: lab1/part3.md
     - 实验原理: lab1/part4.md
     - 实验准备: lab1/part5.md
+    - 实验内容: lab1/part3.md
     - 实验提交: lab1/part6.md
   #- Booth乘法器设计:
   #- 直接相连Cache设计:
