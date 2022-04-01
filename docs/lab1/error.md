@@ -8,4 +8,4 @@
 
 2、如果出现以下错误，请禁掉USB的使用
 
- <center><img src="../e1-3.png" width = 500></center> 
+ <center><img src="../e1-3.png" width = 600></center> 
