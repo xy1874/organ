@@ -53,5 +53,8 @@ nav:
     - 实验准备: lab1/part5.md
     - 实验内容: lab1/part3.md
     - 实验提交: lab1/part6.md
+    - 附录:
+      - Ubuntu常用命令: lab1/appdix.md
+      - 实验环境安装提示: lab1/error.md
   #- Booth乘法器设计:
   #- 直接相连Cache设计:
