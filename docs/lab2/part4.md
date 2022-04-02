@@ -26,7 +26,7 @@
 
 参考代码如下：
 
- <center><img src="../s4-3.png" width = 300></center>   
+ <center><img src="../s4-3.png" width = 250></center>   
 
 查看存储器中的数据：
 
@@ -34,5 +34,5 @@
 
 程序执行结果：
 
- <center><img src="../s4-5.png" width = 400></center>   
+ <center><img src="../s4-5.png" width = 350></center>   
 
