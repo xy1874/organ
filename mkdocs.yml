@@ -56,5 +56,11 @@ nav:
     - 附录:
       - Ubuntu常用命令: lab1/appdix.md
       - 实验环境安装提示: lab1/error.md
+  - 十进制转十六进制: 
+    - 实验平台: lab2/part1.md
+    - 实验目的: lab2/part2.md
+    - 实验内容: lab2/part3.md
+    - 实验原理: lab2/part4.md
+    - 实验提交: lab2/part5.md
   #- Booth乘法器设计:
   #- 直接相连Cache设计:
