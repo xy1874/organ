@@ -16,17 +16,17 @@
 
 1、 查看RARS中data段地址分配
 
- <center><img src="../s4-1.png" width = 500></center>   
+ <center><img src="../s4-1.png" width = 400></center>   
 
 将data段的基地址设置为0x00002000；
 
- <center><img src="../s4-2.png" width = 500></center>   
+ <center><img src="../s4-2.png" width = 400></center>   
 
 2、 存储器中的数据读取
 
 参考代码如下：
 
- <center><img src="../s4-3.png" width = 500></center>   
+ <center><img src="../s4-3.png" width = 300></center>   
 
 查看存储器中的数据：
 
@@ -34,5 +34,5 @@
 
 程序执行结果：
 
- <center><img src="../s4-5.png" width = 500></center>   
+ <center><img src="../s4-5.png" width = 400></center>   
 
