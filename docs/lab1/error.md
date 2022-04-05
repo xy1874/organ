@@ -9,3 +9,7 @@
 2、如果出现以下错误，请禁掉USB的使用
 
  <center><img src="../e1-3.png" width = 600></center> 
+
+参考下述步骤：
+
+ <center><img src="../e1-4.png" width = 600></center>
