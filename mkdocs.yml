@@ -54,8 +54,8 @@ nav:
   #  - 实验内容: lab1/part3.md
   #  - 实验提交: lab1/part6.md
     - 附录:
-      - Ubuntu常用命令: lab1/appdix.md
       - 实验环境安装提示: lab1/error.md
+      - Ubuntu常用命令: lab1/appdix.md
       - Vim常用指令: lab1/vim.md
   #- 十进制转十六进制: 
   #  - 实验平台: lab2/part1.md
