@@ -57,6 +57,7 @@ nav:
       - 实验环境安装提示: lab1/error.md
       - Ubuntu常用命令: lab1/appdix.md
       - Vim常用指令: lab1/vim.md
+      - Text Editor: lab1/text.md
   #- 十进制转十六进制: 
   #  - 实验平台: lab2/part1.md
   #  - 实验目的: lab2/part2.md

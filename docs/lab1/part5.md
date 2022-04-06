@@ -28,4 +28,6 @@
 
 #### 4 实验目录
 
+在终端输入pwd，既可以显示当前路径；
+
  <center><img src="../s5-6.png" width = 500></center>   
