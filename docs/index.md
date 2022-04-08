@@ -34,8 +34,3 @@
   | 实验4 | 存储器实验 |  Vivado  | 直接相联的Cache设计 | **4** | **7** |
 
 
-
-# 实验文件夹
-
-- 详见pkg文件夹
-- https://gitee.com/hitsz-cslab/organ/tree/2022/pkg
