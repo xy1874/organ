@@ -4,7 +4,7 @@ Oracle VM VirtualBox/Ubuntu虚拟机
 
 （虚拟机镜像中集成RISC-V汇编环境）
 
-
+安装过程中如有问题，详见附录提示；
 
 **下载地址：**
 
