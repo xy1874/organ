@@ -23,6 +23,6 @@ Oracle VM VirtualBox/Ubuntu虚拟机
 
 实验文件夹内也有基于Ubuntu的riscv_v tools安装指南，但是如果对Linux不太了解的话，不建议自行编译实验环境。。。
 
-
+也可以参照：https://wiki.hitsz.org/unofficial-lab-env/comp-organ-lab1/ 建立实验环境；
 
 Linux中常用vim/gvim编辑代码，但如果使用不习惯，也可以使用Text Editor，启动方式见附录；
