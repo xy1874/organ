@@ -106,11 +106,19 @@ ELF Header, 以一个 16byte 的序列开始，描述系统 word 大小、字节
 
  <center><img src="../s4-2.png" width = 300></center>   
 
+使用文本编辑器Text Editor（使用方式见附录）或GVim编写，C语言程序代码可以在Windows系统中调试完成，使用剪切板拷贝文件中，按照下图所示的目录保存为hello.c文件。
+
+GVim创建文件命令：gvim hello.c
+
+ <center><img src="../s4-8.png" width = 500></center>   
+
 #### 2.2 **预编译**
 
-在命令行内，执行如下指令进行预编译，得到预编译文件hello.i
+打开终端terminal（快捷键Ctrl+Alt+T），在命令行内，执行如下指令进行预编译，得到预编译文件hello.i
 
 riscv64-unknown-elf-gcc -E hello.c -o hello.i
+
+ <center><img src="../s4-9.png" width = 600></center>   
 
 查看预编译文件
 
