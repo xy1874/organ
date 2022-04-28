@@ -59,7 +59,7 @@ nav:
       - 模块的实例化: verilog/part7.md
       - 模块的测试: verilog/module_test.md
       - 4位全加器设计实例: verilog/part8.md
-      - 实验提交说明: ojguide.md
+    - 实验提交说明: ojguide.md
   - 从C语言到机器码: 
     - 实验平台: lab1/part1.md
     - 实验目的: lab1/part2.md
