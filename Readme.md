@@ -5,3 +5,5 @@
 
 - 课程主页及指导书地址：https://hitsz-cslab.gitee.io/organ/
 
+- 实验包下载：https://gitee.com/hitsz-cslab/organ/tree/2022/pkg
+
