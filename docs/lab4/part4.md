@@ -116,7 +116,7 @@ mem_wrap(mem_wrap.v) ----- 主存存储器模型
 
  <center><img src="../s5-8.png" width = 530></center>
 
-Ø CPU发来wreq信号，同时把写地址和写数据分别放在addr和data端口上(Cyc #0)，代表启动一次写操作。与读操作不同的是：不管Cache是否写命中，CPU的写请求信号wreq_from_cpu和地址信号addr_from_cpu都将仅保持2个时钟周期(Cys #0 - Cyc #2、Cyc #3 - Cyc #5)，而CPU的写数据信号wdata_from_cpu则将在写请求信号wreq_from_cpu有效后的下一个周期前有效(Cyc #1、Cyc #4)。
+Ø CPU发来wreq信号，同时把写地址放在addr端口上(Cyc #0)，代表启动一次写操作。与读操作不同的是：不管Cache是否写命中，CPU的写请求信号wreq_from_cpu和地址信号addr_from_cpu都将仅保持2个时钟周期(Cys #0 - Cyc #2、Cyc #3 - Cyc #5)，而CPU的写数据信号wdata_from_cpu则将在写请求信号wreq_from_cpu有效后的下一个周期前有效(Cyc #1、Cyc #4)。
 
 Ø 如果Cache写命中，则Cache将在收到wreq的下一个周期输出hit响应信号(Cyc #1)。由于采用写直达的写策略，此时Cache除了需要更新相应的Cache数据外，还需按照Block RAM的写时序，向内存输出写数据信号。
 
