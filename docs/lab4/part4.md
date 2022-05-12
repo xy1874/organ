@@ -134,7 +134,7 @@ Cache发生读缺失时，需将当前访问地址所在的数据块从内存中
 
 向内存中写数据的时序如下图所示。
 
- <center><img src="../s5-2.png" width = 350></center>  
+ <center><img src="../s5-2.png" width = 340></center>  
 
 在上图中，Cache将写地址、写数据分别从waddr、wdata端口输出，同时将wreq信号拉高1个时钟周期。当内存模块mem_wrap接收到这些信号后，将自动完成写数据操作。
 

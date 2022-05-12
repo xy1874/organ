@@ -1314,7 +1314,7 @@
 <p><center><img src="../s5-1.png" width = 420></center>  </p>
 <p>在主存空闲阶段，Cache将地址放在raddr端口上，并将rreq信号拉高，代表一次的读请求。若干个周期后，主存将返回4个字拼接而成的数据，并将rvalid信号拉高，代表数据已经准备好，此时可以取走数据。注意，上图中返回的data0是32位的数据。此外，还需注意，读请求信号rreq需一直保持高电平，直到主存成功地返回了数据（即直到rvalid有效）。</p>
 <p>向内存中写数据的时序如下图所示。</p>
-<p><center><img src="../s5-2.png" width = 350></center>  </p>
+<p><center><img src="../s5-2.png" width = 340></center>  </p>
 <p>在上图中，Cache将写地址、写数据分别从waddr、wdata端口输出，同时将wreq信号拉高1个时钟周期。当内存模块mem_wrap接收到这些信号后，将自动完成写数据操作。</p>
 <h3 id="25">2.5 仿真说明</h3>
 <p>完成设计后，运行testbench.v文件中的仿真。运行仿真时，Vivado下方的Tcl Console窗口将打印调试信息，帮助定位出错点。</p>
