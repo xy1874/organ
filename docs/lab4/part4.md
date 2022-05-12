@@ -106,9 +106,9 @@ mem_wrap(mem_wrap.v) ----- 主存存储器模型
 
 下面以 Cyc# 代表周期号，详细叙述Cache和CPU之间的通信约定。
 
-Ø CPU发来rreq信号，同时把地址放在addr端口上(Cyc #0)，代表启动一次读操作。在得到Cache的hit响应(Cyc #1)之前，CPU会保证：rreq_from_cpu信号不会撤下，且地址线addr_from_cpu上的地址不会改变。
+Ø CPU发来rreq信号，同时把地址放在addr端口上(Cyc #0、Cyc #3)，代表启动一次读操作。在得到Cache的hit响应(Cyc #1、Cyc #5)之前，CPU会保证：rreq_from_cpu信号不会撤下，且地址线addr_from_cpu上的地址不会改变(Cyc #0 - Cyc #1、Cyc #3 - Cyc #5)。
 
-Ø 在得到Cache的hit响应之后(Cyc #1)，CPU会保证：在hit信号到来的下一个周期(Cyc #2)，rreq信号马上撤下。Cache需要做到：hit响应信号和读出的数据只需持续一个周期(Cyc #1 - Cyc #2)，同时有效。
+Ø 在得到Cache的hit响应之后(Cyc #1、Cyc #5)，CPU会保证：在hit信号到来的下一个周期(Cyc #2、Cyc #6)，rreq信号马上撤下。Cache需要做到：hit响应信号和读出的数据只需持续一个周期(Cyc #1 - Cyc #2、Cyc #5 - Cyc #6)，同时有效。
 
 Ø CPU未发rreq信号的时候，Cache需要做到：hit信号始终为0，不得置高，数据输出可以是任意值。
 
@@ -116,7 +116,7 @@ mem_wrap(mem_wrap.v) ----- 主存存储器模型
 
  <center><img src="../s5-8.png" width = 530></center>
 
-Ø CPU发来wreq信号，同时把写地址和写数据分别放在addr和data端口上(Cyc #0)，代表启动一次写操作。与读操作不同的是：不管Cache是否写命中，CPU的写请求信号wreq_from_cpu和地址信号addr_from_cpu都将仅保持2个时钟周期(Cys #0 - Cyc #2、Cys #3 - Cyc #5)，而CPU的写数据信号wdata_from_cpu则将在写请求信号wreq_from_cpu有效后的下一个周期前有效(Cyc #1、Cyc #4)。
+Ø CPU发来wreq信号，同时把写地址和写数据分别放在addr和data端口上(Cyc #0)，代表启动一次写操作。与读操作不同的是：不管Cache是否写命中，CPU的写请求信号wreq_from_cpu和地址信号addr_from_cpu都将仅保持2个时钟周期(Cys #0 - Cyc #2、Cyc #3 - Cyc #5)，而CPU的写数据信号wdata_from_cpu则将在写请求信号wreq_from_cpu有效后的下一个周期前有效(Cyc #1、Cyc #4)。
 
 Ø 如果Cache写命中，则Cache将在收到wreq的下一个周期输出hit响应信号(Cyc #1)。由于采用写直达的写策略，此时Cache除了需要更新相应的Cache数据外，还需按照Block RAM的写时序，向内存输出写数据信号。
 
