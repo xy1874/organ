@@ -1,6 +1,6 @@
 site_name: 计算机组成原理实验（2022春季） | 哈工大（深圳）
-copyright: 'Copyright &copy; 2020 - 2022 哈尔滨工业大学（深圳）'
-repo_name: 'HITSZ-COMP2008-Course'
+copyright: 'Copyright &copy; 2020 - 2023 哈尔滨工业大学（深圳）'
+repo_name: 'HITSZ-COMP2008'
 repo_url: 'https://gitee.com/hitsz-cslab/organ'
 
 markdown_extensions:
@@ -29,19 +29,30 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
   # - mathjaxhelper.js
 
-
 theme:
   language: 'zh'
   name: material
   features:
     - navigation.tabs
+    - navigation.expand
   icon:
     logo: fontawesome/solid/microchip
     repo: fontawesome/brands/git-alt
     # favicon: fontawesome/solid/microchip
   palette:
-    primary: 'Orange'
-    accent: 'Orange'
+    - scheme: 'default'
+      primary: 'orange'
+      accent: 'orange'
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到夜晚模式
+    - scheme: 'slate'
+      primary: 'orange'
+      accent: 'orange'
+      toggle:
+        icon: material/weather-night
+        name: 切换到白天模式
+
 nav:
   - 实验须知: 
     - 实验介绍: index.md
