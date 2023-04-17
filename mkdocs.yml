@@ -9,6 +9,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
+  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
@@ -35,10 +36,10 @@ theme:
   features:
     - navigation.tabs
     - navigation.expand
+  # favicon: assets/favicon.svg
   icon:
-    logo: fontawesome/solid/microchip
+    logo: fontawesome/solid/computer
     repo: fontawesome/brands/git-alt
-    # favicon: fontawesome/solid/microchip
   palette:
     - scheme: 'default'
       primary: 'orange'
@@ -56,21 +57,19 @@ theme:
 nav:
   - 实验须知: 
     - 实验介绍: index.md
-    - 实验文件夹: doc.md
-    # - 实验备选平台: platform.md
     - Verilog语法回顾: 
-      - 初学Verilog的几点提醒: verilog/part0.md
-      - 模块的基本结构: verilog/part1.md
-      - 标识符和数据类型: verilog/part2.md
-      - 运算符及表达式: verilog/part3.md
-      - 逻辑门的描述: verilog/part4.md
-      - 赋值语句和块语句: verilog/part5.md
-      - 条件语句和循环语句: verilog/part6.md
-      - 宏定义和参数: verilog/defparam.md
-      - 模块的实例化: verilog/part7.md
-      - 模块的测试: verilog/module_test.md
-      - 4位全加器设计实例: verilog/part8.md
-    - 实验提交说明: ojguide.md
+      - 初学Verilog的几点提醒: home/verilog/part0.md
+      - 模块的基本结构: home/verilog/part1.md
+      - 标识符和数据类型: home/verilog/part2.md
+      - 运算符及表达式: home/verilog/part3.md
+      - 逻辑门的描述: home/verilog/part4.md
+      - 赋值语句和块语句: home/verilog/part5.md
+      - 条件语句和循环语句: home/verilog/part6.md
+      - 宏定义和参数: home/verilog/defparam.md
+      - 模块的实例化: home/verilog/part7.md
+      - 模块的测试: home/verilog/module_test.md
+      - 4位全加器设计实例: home/verilog/part8.md
+    - 实验提交说明: home/operation.md
   - 从C语言到机器码: 
     - 实验平台: lab1/part1.md
     - 实验目的: lab1/part2.md
