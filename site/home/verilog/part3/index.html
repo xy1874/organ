@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../vim/">
+        <link rel="prev" href="../part2/">
       
       
-        <link rel="next" href="../vmshare/">
+        <link rel="next" href="../part4/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>D. Text Editor - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
+        <title>运算符及表达式 - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#text-editor" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              D. Text Editor
+              运算符及表达式
             
           </span>
         </div>
@@ -196,13 +196,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
         实验须知
       </a>
     </li>
@@ -212,15 +214,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../lab1/overview/" class="md-tabs__link">
         实验1 从C语言到机器码
       </a>
     </li>
@@ -248,7 +248,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -277,16 +277,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
       
@@ -295,7 +295,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           实验须知
@@ -308,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         实验介绍
       </a>
     </li>
@@ -320,16 +320,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
       
       
       
@@ -338,7 +338,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           Verilog语法回顾
@@ -351,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part0/" class="md-nav__link">
+      <a href="../part0/" class="md-nav__link">
         初学Verilog的几点提醒
       </a>
     </li>
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part1/" class="md-nav__link">
+      <a href="../part1/" class="md-nav__link">
         模块的基本结构
       </a>
     </li>
@@ -379,305 +379,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part2/" class="md-nav__link">
+      <a href="../part2/" class="md-nav__link">
         标识符和数据类型
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part3/" class="md-nav__link">
-        运算符及表达式
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part4/" class="md-nav__link">
-        逻辑门的描述
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part5/" class="md-nav__link">
-        赋值语句和块语句
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part6/" class="md-nav__link">
-        条件语句和循环语句
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/defparam/" class="md-nav__link">
-        宏定义和参数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part7/" class="md-nav__link">
-        模块的实例化
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/module_test/" class="md-nav__link">
-        模块的测试
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part8/" class="md-nav__link">
-        4位全加器设计实例
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/operation/" class="md-nav__link">
-        实验提交说明
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          实验1 从C语言到机器码
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          实验1 从C语言到机器码
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        实验概述
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
-        实验原理
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../step/" class="md-nav__link">
-        实验步骤
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../submit/" class="md-nav__link">
-        实验提交
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-          附录
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2_5">
-          <span class="md-nav__icon md-icon"></span>
-          附录
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../envir/" class="md-nav__link">
-        A. 实验环境安装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lnxcmd/" class="md-nav__link">
-        B. Ubuntu常用命令
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vim/" class="md-nav__link">
-        C. Vim常用指令
       </a>
     </li>
   
@@ -699,9 +402,102 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          运算符及表达式
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        D. Text Editor
+        运算符及表达式
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    算术运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    位运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    移位运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    拼接运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    等式运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    运算符优先级别表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -714,7 +510,304 @@
   
   
     <li class="md-nav__item">
-      <a href="../vmshare/" class="md-nav__link">
+      <a href="../part4/" class="md-nav__link">
+        逻辑门的描述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part5/" class="md-nav__link">
+        赋值语句和块语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part6/" class="md-nav__link">
+        条件语句和循环语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defparam/" class="md-nav__link">
+        宏定义和参数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part7/" class="md-nav__link">
+        模块的实例化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_test/" class="md-nav__link">
+        模块的测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part8/" class="md-nav__link">
+        4位全加器设计实例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/" class="md-nav__link">
+        实验提交说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          实验1 从C语言到机器码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          实验1 从C语言到机器码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          附录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          附录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/envir/" class="md-nav__link">
+        A. 实验环境安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/lnxcmd/" class="md-nav__link">
+        B. Ubuntu常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/vim/" class="md-nav__link">
+        C. Vim常用指令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/text/" class="md-nav__link">
+        D. Text Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/vmshare/" class="md-nav__link">
         E. 虚拟机共享文件
       </a>
     </li>
@@ -755,6 +848,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    算术运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    位运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    移位运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    拼接运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    等式运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    运算符优先级别表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -768,21 +938,211 @@
                   
 
 
-<h1 id="text-editor">Text Editor</h1>
-<ol>
+<h1 id="_1">运算符及表达式</h1>
+<h2 id="_2">运算符</h2>
+<p>按功能分为以下几类：</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center">种类</th>
+<th align="center">运算符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">算术运算符</td>
+<td align="center"><code>+</code>&emsp;<code>-</code>&emsp;<code>*</code>&emsp;<code>/</code>&emsp;<code>%</code></td>
+</tr>
+<tr>
+<td align="center">逻辑运算符</td>
+<td align="center"><code>&amp;&amp;</code>&emsp;<code>||</code>&emsp;<code>!</code></td>
+</tr>
+<tr>
+<td align="center">位运算符</td>
+<td align="center"><code>~</code>&emsp;<code>|</code>&emsp;<code>^</code>&emsp;<code>&amp;</code>&emsp;<code>^~</code></td>
+</tr>
+<tr>
+<td align="center">赋值运算符</td>
+<td align="center"><code>=</code>&emsp;<code>&lt;=</code></td>
+</tr>
+<tr>
+<td align="center">关系运算符</td>
+<td align="center"><code>&gt;</code>&emsp;<code>&lt;</code>&emsp;<code>&gt;=</code>&emsp;<code>&lt;=</code></td>
+</tr>
+<tr>
+<td align="center">条件运算符</td>
+<td align="center"><code>?:</code></td>
+</tr>
+<tr>
+<td align="center">移位运算符</td>
+<td align="center"><code>&lt;&lt;</code>&emsp;<code>&gt;&gt;</code>&emsp;<code>&gt;&gt;&gt;</code></td>
+</tr>
+<tr>
+<td align="center">拼接运算符</td>
+<td align="center"><code>{}</code></td>
+</tr>
+<tr>
+<td align="center">等式运算符</td>
+<td align="center"><code>==</code>&emsp;<code>!=</code>&emsp;<code>===</code>&emsp;<code>!==</code></td>
+</tr>
+<tr>
+<td align="center">其他</td>
+<td align="center">略</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="_3">算术运算符</h3>
+<ul>
 <li>
-<p>在桌面单击左下角的show applications</p>
-<p><center><img src="../assets/d-1.png" width = 300></center></p>
+<p>在进行整数的除法运算时，结果要略去小数部分，只取整数部分。</p>
 </li>
 <li>
-<p>单击Text Editor，打开</p>
-<p><center><img src="../assets/d-2.png" width = 300></center></p>
+<p>在进行取模运算时（亦称求余运算），结果的符号位与模运算符第一个操作数的符号相同。</p>
 </li>
 <li>
-<p>编辑代码即可</p>
-<p><center><img src="../assets/d-3.png" width = 280></center></p>
+<p>在进行算术运算时，如果某一个操作数有不确定的值<code>X</code>，则整个结果也为不确定值<code>X</code>。</p>
 </li>
-</ol>
+</ul>
+<h3 id="_4">逻辑运算符</h3>
+<ul>
+<li><code>&amp;&amp;</code>和<code>||</code>是双目运算符，其优先级别低于关系运算符，而<code>!</code>高于算术运算符。</li>
+</ul>
+<h3 id="_5">位运算符</h3>
+<ul>
+<li>在不同长度的数据进行位运算时，系统会自动的将两个数右端对齐，位数少的操作数会在相应的高位补0，然后将两个操作数按位进行操作。</li>
+</ul>
+<h3 id="_6">关系运算符</h3>
+<ul>
+<li>
+<p>如果关系运算的表达式为真，则返回值是1；否则返回值是0。 </p>
+</li>
+<li>
+<p>关系运算符的优先级别低于算数运算符，如<code>a &lt; size - 1</code>等同于<code>a &lt; (size - 1)</code>。</p>
+</li>
+<li>
+<p>如果某个操作数值不定，则关系是模糊的，返回值是不定值<code>X</code>。</p>
+</li>
+</ul>
+<h3 id="_7">移位运算符</h3>
+<ul>
+<li>
+<p>表达式<code>a &gt;&gt; n</code>中，<code>a</code>是将要进行移位的数据，<code>n</code>是移位的位数。</p>
+</li>
+<li>
+<p><code>&lt;&lt;</code>和<code>&gt;&gt;</code>是逻辑移位操作符，都用0来填补移出的空位。<code>&gt;&gt;&gt;</code>是算术右移操作符，使用符号位来填补移出的空位。</p>
+</li>
+<li>
+<p>如果操作数已经定义了位宽，则移位后操作数值发生改变，但其位宽不变。</p>
+</li>
+</ul>
+<h3 id="_8">拼接运算符</h3>
+<ul>
+<li>
+<p><code>{</code>信号1的某几位<code>,</code>信号2的某几位<code>,</code>...<code>,</code>信号n的某几位<code>}</code>将某些信号的某些为列出来，中间用逗号分开，最后用大括号括起来表示一个整体的信号。</p>
+</li>
+<li>
+<p>在位拼接的表达式中不允许存在没有指明位数的信号。</p>
+</li>
+</ul>
+<h3 id="_9">等式运算符</h3>
+<ul>
+<li><code>==</code>，<code>!=</code>：<code>X</code>和<code>Z</code>进行比较时，结果为<code>X</code>。</li>
+</ul>
+<p>&emsp;&emsp;<code>==</code>的真值表如下：</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center">==</th>
+<th align="center">0</th>
+<th align="center"><font color=green>1</font></th>
+<th align="center"><font color=red>X</font></th>
+<th align="center"><font color=blue>Z</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+</tr>
+<tr>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+</tr>
+<tr>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+</tr>
+<tr>
+<td align="center"><font color=blue>Z</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+<td align="center"><font color=red>X</font></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<ul>
+<li><code>===</code>，<code>!==</code>：操作数相同结果为1，常用于case表达式的判别。</li>
+</ul>
+<p>&emsp;&emsp;<code>===</code>的真值表如下：</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center">===</th>
+<th align="center">0</th>
+<th align="center"><font color=green>1</font></th>
+<th align="center"><font color=red>X</font></th>
+<th align="center"><font color=blue>Z</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center"><font color=red>X</font></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center"><font color=blue>Z</font></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center"><font color=green>1</font></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="_10">运算符优先级别表</h3>
+<p><center><img alt="img" src="../part3.assets/clip_image002-1585365513980.png" /></center></p>
 
 
 
@@ -824,10 +1184,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

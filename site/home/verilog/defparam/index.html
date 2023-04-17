@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../vim/">
+        <link rel="prev" href="../part6/">
       
       
-        <link rel="next" href="../vmshare/">
+        <link rel="next" href="../part7/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>D. Text Editor - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
+        <title>宏定义和参数 - 计算机组成原理实验（2022春季） | 哈工大（深圳）</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.113286f1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#text-editor" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              D. Text Editor
+              宏定义和参数
             
           </span>
         </div>
@@ -196,13 +196,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
         实验须知
       </a>
     </li>
@@ -212,15 +214,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../lab1/overview/" class="md-tabs__link">
         实验1 从C语言到机器码
       </a>
     </li>
@@ -248,7 +248,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../../.." title="计算机组成原理实验（2022春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2022春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -277,16 +277,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
       
@@ -295,7 +295,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           实验须知
@@ -308,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         实验介绍
       </a>
     </li>
@@ -320,16 +320,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
       
       
       
@@ -338,7 +338,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           Verilog语法回顾
@@ -351,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part0/" class="md-nav__link">
+      <a href="../part0/" class="md-nav__link">
         初学Verilog的几点提醒
       </a>
     </li>
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part1/" class="md-nav__link">
+      <a href="../part1/" class="md-nav__link">
         模块的基本结构
       </a>
     </li>
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part2/" class="md-nav__link">
+      <a href="../part2/" class="md-nav__link">
         标识符和数据类型
       </a>
     </li>
@@ -393,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part3/" class="md-nav__link">
+      <a href="../part3/" class="md-nav__link">
         运算符及表达式
       </a>
     </li>
@@ -407,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part4/" class="md-nav__link">
+      <a href="../part4/" class="md-nav__link">
         逻辑门的描述
       </a>
     </li>
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part5/" class="md-nav__link">
+      <a href="../part5/" class="md-nav__link">
         赋值语句和块语句
       </a>
     </li>
@@ -435,249 +435,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/verilog/part6/" class="md-nav__link">
+      <a href="../part6/" class="md-nav__link">
         条件语句和循环语句
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/defparam/" class="md-nav__link">
-        宏定义和参数
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part7/" class="md-nav__link">
-        模块的实例化
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/module_test/" class="md-nav__link">
-        模块的测试
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/verilog/part8/" class="md-nav__link">
-        4位全加器设计实例
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/operation/" class="md-nav__link">
-        实验提交说明
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          实验1 从C语言到机器码
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          实验1 从C语言到机器码
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        实验概述
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
-        实验原理
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../step/" class="md-nav__link">
-        实验步骤
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../submit/" class="md-nav__link">
-        实验提交
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-          附录
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2_5">
-          <span class="md-nav__icon md-icon"></span>
-          附录
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../envir/" class="md-nav__link">
-        A. 实验环境安装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lnxcmd/" class="md-nav__link">
-        B. Ubuntu常用命令
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vim/" class="md-nav__link">
-        C. Vim常用指令
       </a>
     </li>
   
@@ -699,9 +458,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          宏定义和参数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        D. Text Editor
+        宏定义和参数
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    宏定义
+  </a>
+  
+    <nav class="md-nav" aria-label="宏定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define" class="md-nav__link">
+    1. `define语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ifdef-else-endif" class="md-nav__link">
+    2. `ifdef - `else - `endif语句
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -714,7 +531,248 @@
   
   
     <li class="md-nav__item">
-      <a href="../vmshare/" class="md-nav__link">
+      <a href="../part7/" class="md-nav__link">
+        模块的实例化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_test/" class="md-nav__link">
+        模块的测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../part8/" class="md-nav__link">
+        4位全加器设计实例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/" class="md-nav__link">
+        实验提交说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          实验1 从C语言到机器码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          实验1 从C语言到机器码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          附录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          附录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/envir/" class="md-nav__link">
+        A. 实验环境安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/lnxcmd/" class="md-nav__link">
+        B. Ubuntu常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/vim/" class="md-nav__link">
+        C. Vim常用指令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/text/" class="md-nav__link">
+        D. Text Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lab1/vmshare/" class="md-nav__link">
         E. 虚拟机共享文件
       </a>
     </li>
@@ -755,6 +813,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    宏定义
+  </a>
+  
+    <nav class="md-nav" aria-label="宏定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-define" class="md-nav__link">
+    1. `define语句
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ifdef-else-endif" class="md-nav__link">
+    2. `ifdef - `else - `endif语句
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    参数
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -768,21 +868,77 @@
                   
 
 
-<h1 id="text-editor">Text Editor</h1>
-<ol>
+<h1 id="_1">宏定义和参数</h1>
+<h2 id="_2">宏定义</h2>
+<h3 id="1-define">1. <code>`define</code>语句</h3>
+<ul>
+<li>`define语句用于指定某个标识符来代表一个数字或字符串，如：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">`define WIDTH 8</span>
+
+<span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="p">(...);</span>
+<span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="no">`WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span><span class="w">   </span><span class="c1">// 等同于: reg [7:0] cnt;</span>
+<span class="k">endmodule</span>
+</code></pre></div>
+<h3 id="2-ifdef-else-endif">2. <code>`ifdef - `else - `endif</code>语句</h3>
+<ul>
+<li>Verilog中的<code>`ifdef - `else - `endif</code>语句与C/C++中的<code>#ifdef-#else-#endif</code>类似，起条件综合的作用，如：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="no">`ifdef</span><span class="w"> </span><span class="n">DEBUG</span>
+<span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
+<span class="no">`else</span>
+<span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
+<span class="no">`endif</span>
+
+<span class="no">`ifndef</span><span class="w"> </span><span class="n">DEBUG</span>
+<span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
+<span class="no">`else</span>
+<span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
+<span class="no">`endif</span>
+</code></pre></div>
+<h2 id="_3">参数</h2>
+<ul>
 <li>
-<p>在桌面单击左下角的show applications</p>
-<p><center><img src="../assets/d-1.png" width = 300></center></p>
+<p>Verilog的参数分为局部参数和全局参数2种。</p>
 </li>
 <li>
-<p>单击Text Editor，打开</p>
-<p><center><img src="../assets/d-2.png" width = 300></center></p>
+<p>全局参数既可以在模块内部使用，也可以在实例化模块时修改全局参数。全局参数用关键字<code>parameter</code>定义。通常建议将全局参数定义在模块的输入/输出信号列表前面，如：</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
+<span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="p">,</span>
+<span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span>
+<span class="p">)(</span>
+<span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">,</span>
+<span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rst_n_i</span><span class="p">,</span>
+<span class="w">    </span><span class="p">......</span>
+<span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>在实例化上述模块时，可修改PARAM1和PARAM2，如：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
+<span class="w">    </span><span class="p">.</span><span class="n">PARAM1</span><span class="w">     </span><span class="p">(</span><span class="mh">16</span><span class="p">),</span>
+<span class="w">    </span><span class="p">.</span><span class="n">PARAM2</span><span class="w">     </span><span class="p">(</span><span class="mh">4</span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="n">U_smodule_0</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">.</span><span class="n">clk_i</span><span class="w">      </span><span class="p">(</span><span class="n">clk</span><span class="p">),</span>
+<span class="w">    </span><span class="p">.</span><span class="n">rst_n_i</span><span class="w">    </span><span class="p">(</span><span class="n">rst_n</span><span class="p">),</span>
+<span class="w">    </span><span class="p">......</span>
+<span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>
+<p>局部参数只能在模块内部使用，不可在实例化模块时修改局部参数。</p>
 </li>
 <li>
-<p>编辑代码即可</p>
-<p><center><img src="../assets/d-3.png" width = 280></center></p>
+<p>不需在模块实例化时设置的参数，应将其定义为局部参数（localparam）。局部参数用关键字<code>localparam</code>定义，如：</p>
 </li>
-</ol>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">(...);</span>
+<span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">IDLE</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">STAT0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h2</span><span class="p">;</span>
+<span class="k">endmodule</span>
+</code></pre></div>
 
 
 
@@ -824,10 +980,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
