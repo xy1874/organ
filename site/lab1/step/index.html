@@ -910,17 +910,21 @@
 <center>图3-3 查看汇编文件</center></p>
 <h3 id="24">2.4 汇编</h3>
 <p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-gcc -c hello.s -o hello.o</code>，从而对汇编文件<code>hello.s</code>进行汇编，得到ELF格式的目标文件<code>hello.o</code>。</p>
-<p>&emsp;&emsp;在终端执行命令<code>riscv64-linux-gnu-objdump -D hello.o</code>查看目标文件的机器码，如图3-4所示。</p>
+<p>&emsp;&emsp;在终端执行命令<code>riscv64-linux-gnu-objdump -d hello.o</code>查看目标文件的机器码，如图3-4所示。</p>
 <p><center><img src="../assets/3-4.png" width = 500></center>
 <center>图3-4 查看目标程序的机器码</center></p>
-<p>&emsp;&emsp;如果希望把目标程序的机器码保存下来，则可以在上一条命令的末尾添加<code>&gt; helloelf.txt</code>并执行，即执行命令<code>riscv64-linux-gnu-objdump -D hello.o &gt; helloelf.txt</code> —— <code>&gt;</code>是重定向符号，该符号可将左侧命令的输出内容重定向到右侧的文件并保存下来。</p>
+<p>&emsp;&emsp;如果希望把目标程序的机器码保存下来，则可以在上一条命令的末尾添加<code>&gt; helloelf.txt</code>并执行，即执行命令<code>riscv64-linux-gnu-objdump -d hello.o &gt; helloelf.txt</code> —— <code>&gt;</code>是重定向符号，该符号可将左侧命令的输出内容重定向到右侧的文件并保存下来。</p>
+<div class="admonition info">
+<p class="admonition-title">关于报告内容的补充说明 <img alt="📚" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4da.svg" title=":books:" /></p>
+<p>&emsp;&emsp;实验报告里需填写“汇编后的代码行数”。同学们需要先执行命令<code>riscv64-linux-gnu-objdump -d xxx.o &gt; xxx.txt</code>，将汇编生成的目标文件反汇编，再查看代码行数。</p>
+</div>
 <h3 id="25">2.5 生成可执行文件</h3>
 <p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-gcc -static hello.c -o hello</code>，从而将目标文件<code>hello.o</code>和库文件进行静态链接，得到ELF格式的可执行文件<code>hello</code>。</p>
 <p>&emsp;&emsp;在终端内执行命令<code>spike $(which pk) hello</code>，即可执行<code>hello</code>程序，如图3-5所示。</p>
 <p><center><img src="../assets/3-5.png" width = 500></center>
 <center>图3-5 执行<code>hello</code>程序</center></p>
 <h3 id="26">2.6 反汇编</h3>
-<p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-objdump -S hello &gt; hello.txt</code>，从而对可执行文件<code>hello</code>进行反汇编。</p>
+<p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-objdump -d hello &gt; hello.txt</code>，从而对可执行文件<code>hello</code>进行反汇编。</p>
 <p>&emsp;&emsp;右键选择文本编辑器打开，或输入命令<code>gvim hello.txt &amp;</code>打开并查看反汇编文件<code>hello.txt</code>，如图3-6所示。</p>
 <p><center><img src="../assets/3-6.png" width = 500></center>
 <center>图3-6 查看反汇编文件</center></p>
