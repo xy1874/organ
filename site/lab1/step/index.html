@@ -909,7 +909,11 @@
 <p><center><img src="../assets/3-3.png" width = 500></center>
 <center>图3-3 查看汇编文件</center></p>
 <h3 id="24">2.4 汇编</h3>
-<p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-gcc -c hello.s -o hello.o</code>，从而对汇编文件<code>hello.s</code>进行汇编，得到ELF格式的目标文件<code>hello.o</code>。</p>
+<p>&emsp;&emsp;在终端内执行命令<code>riscv64-linux-gnu-gcc -c -march=rv64g hello.s -o hello.o</code>，从而对汇编文件<code>hello.s</code>进行汇编，得到ELF格式的目标文件<code>hello.o</code>。</p>
+<div class="admonition info">
+<p class="admonition-title">关于<code>-march=rv64g</code>的选项 <img alt="🙋" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f64b.svg" title=":raising_hand:" /></p>
+<p>&emsp;&emsp;在汇编时，添加了<code>-march=rv64g</code>选项之后，生成的目标文件只包含32位的指令，不含16位压缩指令。</p>
+</div>
 <p>&emsp;&emsp;在终端执行命令<code>riscv64-linux-gnu-objdump -d hello.o</code>查看目标文件的机器码，如图3-4所示。</p>
 <p><center><img src="../assets/3-4.png" width = 500></center>
 <center>图3-4 查看目标程序的机器码</center></p>
