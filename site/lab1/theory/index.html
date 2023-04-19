@@ -939,14 +939,14 @@
 <div class="admonition info">
 <p class="admonition-title">小拓展 <img alt="📖" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4d6.svg" title=":book:" /></p>
 <p>&emsp;&emsp;一个ELF文件通常包含以下内容：</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>ELF Header</strong>：一个<code>16B</code>的字节序列，描述系统字（<code>Word</code>）的大小、字节顺序等；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.text</strong>：代码段（Text Segment），即程序的机器代码；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.data</strong>：数据段（Data Segment），存放代码中具有非零初始值的全局变量；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.rodata</strong>：只读数据段，存放代码中的常量，如字符串常量、全局常量等；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.bss</strong>：存放未被初始化或初始值为0的全局变量和静态变量；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.symtab</strong>：符号表，存放代码中定义和引用的符号信息，如函数、变量、常量等；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.debug</strong>：存放调试信息，包含源代码、行号等。只有编译时添加“<code>-g</code>”选项才会生成；</p>
-<p>&emsp;&emsp;<img alt="♠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2660.svg" title=":spades:" /> <strong>.strtab</strong>：字符串表，包含定义的字符串和节（section）的名字。</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>ELF Header</strong>：一个<code>16B</code>的字节序列，描述系统字（<code>Word</code>）的大小、字节顺序等；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.text</strong>：代码段（Text Segment），即程序的机器代码；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.data</strong>：数据段（Data Segment），存放代码中具有非零初始值的全局变量；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.rodata</strong>：只读数据段，存放代码中的常量，如字符串常量、全局常量等；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.bss</strong>：存放未被初始化或初始值为0的全局变量和静态变量；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.symtab</strong>：符号表，存放代码中定义和引用的符号信息，如函数、变量、常量等；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.debug</strong>：存放调试信息，包含源代码、行号等。只有编译时添加“<code>-g</code>”选项才会生成；</p>
+<p>&emsp;&emsp;<img alt="💠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a0.svg" title=":diamond_shape_with_a_dot_inside:" /> <strong>.strtab</strong>：字符串表，包含定义的字符串和节（section）的名字。</p>
 </div>
 <h2 id="3">3. 链接阶段</h2>
 <p>&emsp;&emsp;汇编生成的目标文件不能直接运行。为了得到能够被操作系统加载运行的可执行文件，必须在目标文件中包含固定格式的信息头，还必须将目标文件与系统提供的启动代码链接起来才能正常运行。这些工作都是由链接器完成的。</p>
