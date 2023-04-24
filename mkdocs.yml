@@ -1,4 +1,4 @@
-site_name: 计算机组成原理实验（2022春季） | 哈工大（深圳）
+site_name: 计算机组成原理实验（2023春季） | 哈工大（深圳）
 copyright: 'Copyright &copy; 2020 - 2023 哈尔滨工业大学（深圳）'
 repo_name: 'HITSZ-COMP2008'
 repo_url: 'https://gitee.com/hitsz-cslab/organ'
@@ -81,19 +81,18 @@ nav:
       - C. Vim常用指令: lab1/vim.md
       - D. Text Editor: lab1/text.md
       - E. 虚拟机共享文件: lab1/vmshare.md
-  # - 实验2 寻找回文子串: 
-  #   - 实验概述: lab2/overview.md
-  #   - 实验原理: lab2/theory.md
-  #   - 实验步骤: lab2/step.md
-  #   - 附加题: lab2/extra.md
-  #   - 实验提交: lab2/submit.md
-  # - Booth乘法器设计:
-  #   - 实验平台: lab3/part1.md
-  #   - 实验目的: lab3/part2.md
-  #   - 实验内容: lab3/part3.md
-  #   - 实验原理: lab3/part4.md
-  #   - 实验准备: lab3/part5.md
-  #   - 实验提交: lab3/part6.md
+  - 实验2 寻找回文子串: 
+    - 实验概述: lab2/overview.md
+    - 实验原理: lab2/theory.md
+    - 实验步骤: lab2/step.md
+    - 附加题: lab2/extra.md
+    - 实验提交: lab2/submit.md
+  - 实验3 浮点运算器设计:
+    - 实验概述: lab3/overview.md
+    - 实验原理: lab3/theory.md
+    - 实验步骤: lab3/step.md
+    - 附加题: lab3/extra.md
+    - 实验提交: lab3/submit.md
   # - 实验4 AXI-Lite总线接口设计:
   #   - 实验概述: lab4/overview.md
   #   - 实验原理: lab4/theory.md
