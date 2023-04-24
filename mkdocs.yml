@@ -87,12 +87,12 @@ nav:
     - 实验步骤: lab2/step.md
     - 附加题: lab2/extra.md
     - 实验提交: lab2/submit.md
-  - 实验3 浮点运算器设计:
-    - 实验概述: lab3/overview.md
-    - 实验原理: lab3/theory.md
-    - 实验步骤: lab3/step.md
-    - 附加题: lab3/extra.md
-    - 实验提交: lab3/submit.md
+  # - 实验3 浮点运算器设计:
+  #   - 实验概述: lab3/overview.md
+  #   - 实验原理: lab3/theory.md
+  #   - 实验步骤: lab3/step.md
+  #   - 附加题: lab3/extra.md
+  #   - 实验提交: lab3/submit.md
   # - 实验4 AXI-Lite总线接口设计:
   #   - 实验概述: lab4/overview.md
   #   - 实验原理: lab4/theory.md

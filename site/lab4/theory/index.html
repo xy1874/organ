@@ -1,0 +1,1233 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+    
+    
+      
+        <title>实验原理 - 计算机组成原理实验（2023春季） | 哈工大（深圳）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="计算机组成原理实验（2023春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2023春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            计算机组成原理实验（2023春季） | 哈工大（深圳）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              实验原理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到夜晚模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换到夜晚模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        实验须知
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../lab1/overview/" class="md-tabs__link">
+        实验1 从C语言到机器码
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../lab2/overview/" class="md-tabs__link">
+        实验2 寻找回文子串
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="计算机组成原理实验（2023春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2023春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    计算机组成原理实验（2023春季） | 哈工大（深圳）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          实验须知
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          实验须知
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        实验介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Verilog语法回顾
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Verilog语法回顾
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part0/" class="md-nav__link">
+        初学Verilog的几点提醒
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part1/" class="md-nav__link">
+        模块的基本结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part2/" class="md-nav__link">
+        标识符和数据类型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part3/" class="md-nav__link">
+        运算符及表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part4/" class="md-nav__link">
+        逻辑门的描述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part5/" class="md-nav__link">
+        赋值语句和块语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part6/" class="md-nav__link">
+        条件语句和循环语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/defparam/" class="md-nav__link">
+        宏定义和参数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part7/" class="md-nav__link">
+        模块的实例化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/module_test/" class="md-nav__link">
+        模块的测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part8/" class="md-nav__link">
+        4位全加器设计实例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/operation/" class="md-nav__link">
+        实验提交说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          实验1 从C语言到机器码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          实验1 从C语言到机器码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          附录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          附录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/envir/" class="md-nav__link">
+        A. 实验环境安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/lnxcmd/" class="md-nav__link">
+        B. Ubuntu常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/vim/" class="md-nav__link">
+        C. Vim常用指令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/text/" class="md-nav__link">
+        D. Text Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/vmshare/" class="md-nav__link">
+        E. 虚拟机共享文件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          实验2 寻找回文子串
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          实验2 寻找回文子串
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-soc" class="md-nav__link">
+    1. SoC架构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ready-valid" class="md-nav__link">
+    2. ready-valid握手协议
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-axi-lite" class="md-nav__link">
+    3. AXI-Lite总线协议
+  </a>
+  
+    <nav class="md-nav" aria-label="3. AXI-Lite总线协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-axi4-lite" class="md-nav__link">
+    3.1 AXI4-Lite写时序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-axi4-lite" class="md-nav__link">
+    3.2 AXI4-Lite读时序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cpu_bus" class="md-nav__link">
+    4. cpu_bus总线
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">实验原理</h1>
+<h2 id="1-soc">1. SoC架构</h2>
+<p>&emsp;&emsp;CPU由数据通路和控制器组成，其主要功能是控制和运算。对CPU进行扩展，增加互联总线、存储器和各种各样的I/O接口电路，形成完整的计算机系统，并将整个系统集成到单芯片上，即为SoC。SoC具有集成度高、功耗低、体积小等优点，在嵌入式系统领域中被广泛应用。</p>
+<p>&emsp;&emsp;本实验提供的SoC架构如图2-1所示。32位处理器核心<code>cpu_core</code>通过内部总线<code>cpu_bus</code>连接到<code>axilite_master</code>模块。<code>axilite_master</code>模块接收并解析<code>cpu_core</code>的数据读写请求，并将请求以AXI4-Lite总线协议发送到AXI总线桥模块。AXI总线桥模块根据地址，将来自<code>axilite_master</code>模块的数据读写请求转发给相应的从设备（如Block RAM存储器、外设）。</p>
+<p><center><img src="../assets/2-1.png" width = 540></center>
+<center>图2-1 SoC架构图</center></p>
+<h2 id="2-ready-valid">2. <code>ready-valid</code>握手协议</h2>
+<p>&emsp;&emsp;为确保地址、数据等信息能在发送端、接收端之间准确无误地传输，需要在传输信息时添加握手信号。握手信号之间的约定即为握手协议。</p>
+<p>&emsp;&emsp;<code>ready-valid</code>协议是最常用的握手协议之一。<code>ready</code>信号表示接收端的就绪状态 —— 当<code>ready</code>信号有效，表示接收端已就绪，可以接收新的信息；否则表示接收端在忙，暂时不能接收信息。<code>valid</code>信号表示发送端的发送状态 —— 当<code>valid</code>信号有效，表示发送端正在发送新的信息，此时信号线上的信息为有效信息；否则表示无信息在发送，此时信号线上的信息是无效信息。</p>
+<p>&emsp;&emsp;在<code>ready-valid</code>握手协议中，当且仅当<code>ready</code>信号和<code>valid</code>信号均为高电平时，才能在时钟信号上升沿传输数据。<code>ready-valid</code>握手协议的典型时序如图2-2所示。</p>
+<p><center><img src="../assets/2-2.PNG" width = 450></center>
+<center>图2-2 <code>ready-valid</code>握手协议时序图</center></p>
+<div class="admonition info">
+<p class="admonition-title">时序解读 <img alt="📖" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4d6.svg" title=":book:" /></p>
+<p>&emsp;&emsp;在图2-2中，<code>data0</code>、<code>data3</code>为无效数据，<code>data1</code>、<code>data2</code>为有效数据，但只有<code>data2</code>被成功发送到接收端。</p>
+</div>
+<h2 id="3-axi-lite">3. AXI-Lite总线协议</h2>
+<p>&emsp;&emsp;AXI4是基于ready-valid握手协议的高性能嵌入式总线协议，AXI4-Lite是AXI4的精简版。</p>
+<p>&emsp;&emsp;AXI4-Lite总线包含写地址（AW）、写数据（W）、写响应（B）、读地址（AR）和读数据（R）五个通道，各通道相互独立且可并行工作，AXI4-Lite也因此具备同时传输写请求和读请求的能力。</p>
+<p>&emsp;&emsp;AW、W和B通道用于传输写请求，AR和R通道用于传输读请求。各通道的功能、信号定义等如表2-1所示（以32位总线为例）。</p>
+<p><center>表2-1 AXI4-Lite总线通道及信号定义
+ 
+<table>
+  <col width=60>
+  <col width=100>
+  <col width=58>
+  <col width=50>
+  <col width=80>
+  <col width=220>
+  <tr>
+   <th align="center">通道</th>
+   <th align="center">功能</th>
+   <th align="center">信号</th>
+   <th align="center">位宽</th>
+   <th align="center">方向</th>
+   <th align="center">释义</th>
+  </tr>
+  <tr>
+   <td rowspan=3 align="center" valign="middle">写地址<br>(AW)</td>
+   <td rowspan=3 valign="middle">主设备通过AW通道发送被写数据的地址</td>
+   <td align="center">awaddr</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写地址</td>
+  </tr>
+  <tr>
+   <td align="center">awvalid</td>
+   <td align="center">1</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写地址的有效信号</td>
+  </tr>
+  <tr>
+   <td align="center">awready</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>从设备AW通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td rowspan=4 align="center" valign="middle">写数据<br>(W)</td>
+   <td rowspan=4 valign="middle">主设备通过W通道发送被写数据及写使能信号</td>
+   <td align="center">wdata</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写数据</td>
+  </tr>
+  <tr>
+   <td align="center">wstrb</td>
+   <td align="center">4</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写使能，每位对应1字节</td>
+  </tr>
+  <tr>
+   <td align="center">wvalid</td>
+   <td align="center">1</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写数据的有效信号</td>
+  </tr>
+  <tr>
+   <td align="center">wready</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>从设备W通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td rowspan=3 align="center" valign="middle">写响应<br>(B)</td>
+   <td rowspan=3 valign="middle">从设备通过B通道返回写操作结果</td>
+   <td align="center">bready</td>
+   <td align="center">1</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>主设备B通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td align="center">bresp</td>
+   <td align="center">2</td>
+   <td align="center">从→<b>主</b></td>
+   <td>写操作结果（可忽略）</td>
+  </tr>
+  <tr>
+   <td align="center">bvalid</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>写响应的有效信号</td>
+  </tr>
+  <tr>
+   <td rowspan=3 align="center" valign="middle">读地址<br>(AR)</td>
+   <td rowspan=3 valign="middle">主设备通过AR通道发送被读数据的地址</td>
+   <td align="center">araddr</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>读地址</td>
+  </tr>
+  <tr>
+   <td align="center">arvalid</td>
+   <td align="center">1</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>读地址的有效信号</td>
+  </tr>
+  <tr>
+   <td align="center">arready</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>从设备AR通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td rowspan=4 align="center" valign="middle">读数据<br>(R)</td>
+   <td rowspan=4 valign="middle">从设备通过R通道返回被读取数据</td>
+   <td align="center">rready</td>
+   <td align="center">1</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>主设备R通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td align="center">rdata</td>
+   <td align="center">32</td>
+   <td align="center">从→<b>主</b></td>
+   <td>读数据</td>
+  </tr>
+  <tr>
+   <td align="center">rresp</td>
+   <td align="center">2</td>
+   <td align="center">从→<b>主</b></td>
+   <td>读操作结果（可忽略）</td>
+  </tr>
+  <tr>
+   <td align="center">rvalid</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>读响应的有效信号</td>
+  </tr>
+ </table></p>
+<p></center></p>
+<h3 id="31-axi4-lite">3.1 AXI4-Lite写时序</h3>
+<p>&emsp;&emsp;AXI4-Lite总线的写操作时序如图2-3所示。</p>
+<p><center><img src="../assets/2-3.png"></center>
+<center>图2-3 AXI4-Lite总线写时序</center></p>
+<p>&emsp;&emsp;只要有写请求需要发送，主设备就可以将写地址、写数据分别发送到AW通道和W通道。对于AW通道，主设备需在拉高<code>awvalid</code>的同时将写地址发送到<code>awaddr</code>，且主设备必须维持<code>awvalid</code>和<code>awaddr</code>有效，直到从设备拉高<code>awready</code>。从设备拉高<code>awready</code>后，主设备才能撤掉AW通道上的写请求。W通道同理。</p>
+<p>&emsp;&emsp;特别注意，即使<code>awvalid</code>和<code>wvalid</code>同时拉高，<code>awready</code>和<code>wready</code>也不一定同时有效。但只要<code>awready</code>有效，就表示AW通道的写地址成功被从设备接收；只要<code>wready</code>有效，就表示W通道的写数据和写使能成功被从设备接收。当AW通道和W通道的信息都成功被从设备接收后，主设备的写请求才算发送完成。</p>
+<p>&emsp;&emsp;主设备写请求发送完成后，从设备开始进行写操作。写操作完成后，若主设备的<code>bready</code>信号有效，则从设备将拉高<code>bvalid</code>信号。主设备检测到<code>bvalid</code>有效时，即可发送新的写请求。</p>
+<p>&emsp;&emsp;为简化设计，在本实验中，可令<code>bready</code>一直有效，并忽略<code>bresp</code>信号。</p>
+<h3 id="32-axi4-lite">3.2 AXI4-Lite读时序</h3>
+<p>&emsp;&emsp;AXI4-Lite总线的读操作时序如图2-4所示。</p>
+<p><center><img src="../assets/2-4.png"></center>
+<center>图2-4 AXI4-Lite总线读时序</center></p>
+<p>&emsp;&emsp;只要有读请求需要发送，主设备就可以将读地址发送到AR通道。主设备需在拉高<code>arvalid</code>的同时将读地址发送到<code>araddr</code>，且主设备必须维持<code>arvalid</code>和<code>araddr</code>有效，直到从设备拉高<code>arready</code>。</p>
+<p>&emsp;&emsp;<code>arready</code>有效，表示主设备的读地址成功被从设备接收。从设备接收读地址后，开始进行读操作。读操作完成后，若主设备的<code>rready</code>信号有效，则从设备将拉高<code>rvalid</code>信号，同时将读到的数据发送到<code>rdata</code>。<code>rvalid</code>和<code>rdata</code>只有效一个时钟周期。</p>
+<p>&emsp;&emsp;为简化设计，在本实验中，可令<code>rready</code>信号一直有效，并忽略<code>rresp</code>信号。</p>
+<h2 id="4-cpu_bus">4. <code>cpu_bus</code>总线</h2>
+<p>&emsp;&emsp;<code>cpu_bus</code>是处理器核心<code>cpu_core</code>与<code>axilite_master</code>模块之间的数据传输总线，包含写数据（W）、读数据（R）两个相互独立的通道，各通道的信号定义如表2-2所示。</p>
+<p><center>表2-2 <code>cpu_bus</code>信号定义
+ 
+<table>
+  <col width=80>
+  <col width=58>
+  <col width=50>
+  <col width=80>
+  <col width=220>
+  <tr>
+   <th align="center">通道</th>
+   <th align="center">信号</th>
+   <th align="center">位宽</th>
+   <th align="center">方向</th>
+   <th align="center">释义</th>
+  </tr>
+  <tr>
+   <td rowspan=4 align="center" valign="middle">写数据<br>(W)</td>
+   <td align="center">wrdy</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>从设备W通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td align="center">wen</td>
+   <td align="center">4</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写使能，支持写字、半字和字节</td>
+  </tr>
+  <tr>
+   <td align="center">waddr</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写地址</td>
+  </tr>
+  <tr>
+   <td align="center">wdata</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>写数据</td>
+  </tr>
+  <tr>
+   <td rowspan=5 align="center" valign="middle">读数据<br>(R)</td>
+   <td align="center">rrdy</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>从设备R通道的就绪信号</td>
+  </tr>
+  <tr>
+   <td align="center">ren</td>
+   <td align="center">4</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>读使能，支持读字、半字和字节</td>
+  </tr>
+  <tr>
+   <td align="center">raddr</td>
+   <td align="center">32</td>
+   <td align="center"><b>主</b>→从</td>
+   <td>读地址</td>
+  </tr>
+  <tr>
+   <td align="center">rvalid</td>
+   <td align="center">1</td>
+   <td align="center">从→<b>主</b></td>
+   <td>读数据的有效信号</td>
+  </tr>
+  <tr>
+   <td align="center">rdata</td>
+   <td align="center">32</td>
+   <td align="center">从→<b>主</b></td>
+   <td>读数据</td>
+  </tr>
+ </table></p>
+<p></center></p>
+<p>&emsp;&emsp;<code>cpu_bus</code>的写操作时序如图2-5所示。</p>
+<p><center><img src="../assets/2-5.png" width = 600></center>
+<center>图2-5 <code>cpu_bus</code>写时序</center></p>
+<p>&emsp;&emsp;从设备的<code>wrdy</code>信号有效时，主设备的写请求（<code>wen</code>、<code>waddr</code>、<code>wdata</code>）才会被从设备接收。从设备接收写请求后，将<code>wrdy</code>拉低，并开始处理写请求。当写请求处理完毕后，<code>wrdy</code>信号被再次拉高。</p>
+<p>&emsp;&emsp;<code>cpu_bus</code>的读操作时序如图2-6所示。</p>
+<p><center><img src="../assets/2-6.png" width = 650></center>
+<center>图2-6 <code>cpu_bus</code>读时序</center></p>
+<p>&emsp;&emsp;从设备的<code>rrdy</code>信号有效时，主设备的读请求（<code>ren</code>、<code>raddr</code>）才会被从设备接收。从设备接收读请求后，将<code>rrdy</code>拉低，并开始处理读请求。数据被取回后，从设备根据<code>ren</code>信号按需进行符号扩展，然后在拉高<code>rvalid</code>信号的同时将数据发送到<code>rdata</code>信号上。<code>rvalid</code>和<code>rdata</code>只有效1个周期。当读请求处理完成后，<code>rrdy</code>信号被再次拉高。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2023 哈尔滨工业大学（深圳）
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
