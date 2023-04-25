@@ -869,23 +869,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-xxx" class="md-nav__link">
-    1. XXX
+  <a href="#1" class="md-nav__link">
+    1. 操作步骤
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-xxx" class="md-nav__link">
-    2. XXX
+  <a href="#2" class="md-nav__link">
+    2. 模板工程简介
   </a>
   
-    <nav class="md-nav" aria-label="2. XXX">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 仿真调试说明
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 仿真调试说明">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-xxx" class="md-nav__link">
-    2.1 XXX
+  <a href="#31" class="md-nav__link">
+    3.1 顶层模块设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 仿真设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 仿真波形说明
   </a>
   
 </li>
@@ -911,12 +932,70 @@
 
 
 <h1 id="_1">实验步骤</h1>
-<h2 id="1-xxx">1. XXX</h2>
-<p>&emsp;&emsp;XXXXX</p>
-<h2 id="2-xxx">2. XXX</h2>
-<p>&emsp;&emsp;XXX</p>
-<h3 id="21-xxx">2.1 XXX</h3>
-<p>&emsp;&emsp;XXXXX</p>
+<h2 id="1">1. 操作步骤</h2>
+<p>&emsp;&emsp;（1）阅读实验指导书或理论课PPT，掌握IEEE754单精度浮点数的格式以及运算过程；</p>
+<p>&emsp;&emsp;（2）打开Vivado模板工程，完成浮点运算器设计：如果采用时序电路方案，完成<br />
+&emsp;&emsp;&emsp;&emsp;&ensp;<code>fp_unit_clk.v</code>；如果采用组合电路方案，完成<code>fp_unit.v</code>；二选一完成即可；</p>
+<p>&emsp;&emsp;（3）运行功能仿真，根据仿真波形完成调试；</p>
+<p>&emsp;&emsp;（4）反思实验过程，总结收获并整理遇到的问题及解决方案，撰写实验报告。</p>
+<h2 id="2">2. 模板工程简介</h2>
+<p>&emsp;&emsp;模板工程包含4个源文件，如表3-1所示。</p>
+<p><center>表3-1 模板工程源文件说明</center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">文件名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center"><code>fp_unit_clk.v</code></td>
+<td align="center">时序电路实现方案（待完成）</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><code>fpu_tb_clk.sv</code></td>
+<td align="center">时序电路Testbench</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"><code>fp_unit.v</code></td>
+<td align="center">组合电路实现方案（待完成）</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center"><code>fpu_tb.sv</code></td>
+<td align="center">组合电路Testbench</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>&emsp;&emsp;简言之，如果使用时序电路实现运算器，则完成<code>fp_unit_clk.v</code>，并使用<code>fpu_tb_clk.sv</code>作为仿真文件；如果使用组合电路实现运算器，则完成<code>fp_unit.v</code>，并使用<code>fpu_tb.sv</code>作为仿真文件。</p>
+<h2 id="3">3. 仿真调试说明</h2>
+<h3 id="31">3.1 顶层模块设置</h3>
+<p>&emsp;&emsp;模板工程默认以<code>fp_unit_clk.v</code>作为顶层模块，默认以<code>fpu_tb_clk.sv</code>作为仿真的顶层模块。如果你使用的是组合电路实现运算器，则在仿真之前，需要先更改顶层模块，如图3-1所示。</p>
+<p><center><img src="../assets/3-1a.png" width = 450></center>
+<center>图3-1 a) 更改设计的顶层模块</center></p>
+<p><center><img src="../assets/3-1b.png" width = 450></center>
+<center>图3-1 b) 更改仿真的顶层模块</center></p>
+<h3 id="32">3.2 仿真设置</h3>
+<p>&emsp;&emsp;Vivado仿真波形中的信号值默认采用16进制显示。为了方便观察，我们可以将它设置成以IEEE754浮点数显示，如图3-2所示。</p>
+<p><center><img src="../assets/3-2.png" width = 450></center>
+<center>图3-2 更改仿真波形显示数据的格式</center></p>
+<p>&emsp;&emsp;在随后打开的<code>Real Settings</code>窗口中选择<code>Single Precision</code>即可，如图3-3所示。</p>
+<p><center><img src="../assets/3-3.png" width = 380></center>
+<center>图3-3 设置仿真显示数据位单精度浮点数</center></p>
+<h3 id="33">3.3 仿真波形说明</h3>
+<p>&emsp;&emsp;对于时序电路的实现方案，仿真时，查看<code>ready</code>信号有效时，<code>answer</code>信号与运算器输出的运算结果是否相同。如果相同，表示运算结果正确，如图3-4所示。</p>
+<p><center><img src="../assets/3-4.png" width = auto></center>
+<center>图3-4 查看时序方案的运算结果是否正确</center></p>
+<p>&emsp;&emsp;对于组合电路的实现方案，仿真时，查看<code>answer</code>信号与运算器输出的运算结果是否相同。如果相同，表示运算结果正确，如图3-5所示。</p>
+<p><center><img src="../assets/3-5.png" width = 500></center>
+<center>图3-5 查看组合方案的运算结果是否正确</center></p>
 
 
 

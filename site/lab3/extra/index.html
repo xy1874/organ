@@ -894,6 +894,7 @@
 <h2 id="05">题目：浮点运算器设计（<font color=green><strong>+0.5</strong></font>分）</h2>
 <p>&emsp;&emsp;修改必做题的运算器代码，使其支持非规格化数据的加减法运算。</p>
 <p>&emsp;&emsp;不考虑<script type="math/tex">\pm \infty</script>和<script type="math/tex">NaN</script>等特殊数据作为输入或运算结果的情况。</p>
+<p>&emsp;&emsp;不能使用Vivado库或任何第三方提供的IP核。</p>
 <div class="admonition hint">
 <p class="admonition-title">提示 <img alt="💡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a1.svg" title=":bulb:" /></p>
 <p>&emsp;&emsp;按照IEEE754的标准，阶码采用移码来表示。对于规格化数，指数等于阶码<script type="math/tex">Exponent</script>减去<script type="math/tex">-127</script>；对于非规格化数，指数则恒为<script type="math/tex">-126</script>，而<script type="math/tex">-126=1-127</script>，即 <strong>非规格化数可视为阶码<script type="math/tex">Exponent</script>为<script type="math/tex">1</script>，但尾数<script type="math/tex">Mantissa</script>不含隐藏<script type="math/tex">1</script>的特殊的“规格化数”</strong>。如此一来，在运算时就可以将非规格化数当作规格化数进行处理。</p>
