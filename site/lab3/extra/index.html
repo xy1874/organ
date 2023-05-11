@@ -1067,7 +1067,7 @@
 <p>&emsp;&emsp;（1）要求通过Testbench的<u>全部11组（共22个）</u>测试用例；</p>
 <p>&emsp;&emsp;（2）不考虑<script type="math/tex">\pm \infty</script>和<script type="math/tex">NaN</script>等特殊数据作为输入或运算结果的情况；</p>
 <p>&emsp;&emsp;（3）不能使用Vivado库或任何第三方提供的IP核。</p>
-<div class="admonition hint">
+<div class="admonition tip">
 <p class="admonition-title">提示 <img alt="💡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4a1.svg" title=":bulb:" /></p>
 <p>&emsp;&emsp;（1）按照IEEE754的标准，阶码采用移码来表示。对于规格化数，指数等于阶码<script type="math/tex">Exponent</script>减去<script type="math/tex">-127</script>；对于非规格化数，指数则恒为<script type="math/tex">-126</script>，而<script type="math/tex">-126=1-127</script>，即 <strong>非规格化数可视为阶码<script type="math/tex">Exponent</script>为<script type="math/tex">1</script>，但尾数<script type="math/tex">Mantissa</script>不含隐藏<script type="math/tex">1</script>的特殊的“规格化数”</strong>。如此一来，在运算时就可以将非规格化数当作规格化数进行处理。</p>
 <p>&emsp;&emsp;（2）思考规格化数和非规格化数的区别是什么？如何在规格化的步骤中，区分当前的运算结果是规格化数还是非规格化数？</p>
