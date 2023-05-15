@@ -1282,7 +1282,7 @@
 <p>&emsp;&emsp;在图2-2中，<code>data0</code>、<code>data3</code>为无效数据，<code>data1</code>、<code>data2</code>为有效数据，但只有<code>data2</code>被成功发送到接收端。</p>
 </div>
 <h2 id="3-axi-lite">3. AXI-Lite总线协议</h2>
-<p>&emsp;&emsp;AXI4是基于ready-valid握手协议的高性能嵌入式总线协议，AXI4-Lite是AXI4的精简版。</p>
+<p>&emsp;&emsp;AXI4是基于<code>ready-valid</code>握手协议的高性能嵌入式总线协议，AXI4-Lite是AXI4的精简版。</p>
 <p>&emsp;&emsp;AXI4-Lite总线包含写地址（AW）、写数据（W）、写响应（B）、读地址（AR）和读数据（R）五个通道，各通道相互独立且可并行工作，AXI4-Lite也因此具备同时传输写请求和读请求的能力。</p>
 <p>&emsp;&emsp;AW、W和B通道用于传输写请求，AR和R通道用于传输读请求。各通道的功能、信号定义等如表2-1所示（以32位总线为例）。</p>
 <p><center>表2-1 AXI4-Lite总线通道及信号定义
@@ -1514,6 +1514,10 @@
 <p><center><img src="../assets/2-6.png" width = 650></center>
 <center>图2-6 <code>cpu_bus</code>读时序</center></p>
 <p>&emsp;&emsp;从设备的<code>rrdy</code>信号有效时，主设备的读请求（<code>ren</code>、<code>raddr</code>）才会被从设备接收。从设备接收读请求后，将<code>rrdy</code>拉低，并开始处理读请求。<strong>数据被取回后，从设备根据<code>ren</code>信号按需进行符号扩展</strong>，然后在拉高<code>rvalid</code>信号的同时将数据发送到<code>rdata</code>信号上。<code>rvalid</code>和<code>rdata</code>只有效1个周期。当读请求处理完成后，<code>rrdy</code>信号被再次拉高。</p>
+<div class="admonition tip">
+<p class="admonition-title">信号分析 <img alt="〰" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/3030.svg" title=":wavy_dash:" /></p>
+<p>&emsp;&emsp;事实上，<code>cpu_bus</code>总线协议可看作<code>ready-valid</code>协议的简化版变体。在<code>cpu_bus</code>总线中，使能信号（包括<code>wen</code>和<code>ren</code>）兼有<code>valid</code>信号的作用 —— 使能信号为<code>4'b0000</code>时既不写也不读，相当于表示此时的数据是无效数据。</p>
+</div>
 
 
 
