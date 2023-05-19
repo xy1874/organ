@@ -1220,30 +1220,66 @@
 </ul>
 <h2 id="_1">半加器</h2>
 <p><img alt="img" src="../part8.assets/clip_image014.png" /></p>
-<div class="highlight"><pre><span></span><code>module half_adder(input a,input b, output sum,output c_out); //半加器
-     assign sum = a^b;
-     assign c_out = a&amp;b;
-endmodule
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">half_adder</span><span class="w"> </span><span class="p">(</span><span class="w">      </span><span class="c1">//半加器</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">     </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">a_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">     </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">b_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">     </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">sum_o</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">     </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">carry_o</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">sum_o</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">a_i</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b_i</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">carry_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b_i</span><span class="p">;</span>
+<span class="mh">10</span><span class="o">|</span>
+<span class="mh">11</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 <h2 id="1">1位全加器</h2>
 <p><img alt="image-20200328185041063" src="../part8.assets/image-20200328185041063.png" /></p>
-<div class="highlight"><pre><span></span><code>module full_adder(input a,input b,input c_in,output sum,output c_out);
-    wire sum1;                                        
-     wire c_out1,c_out2;    
-     half_adder half_adder1(.a(a),.b(b),.sum(sum1),.c_out(c_out1));    
-     half_adder half_adder2(.a(c_in),.b(sum1),.sum(sum),.c_out(c_out2));
-     assign c_out = c_out1|c_out2;
-endmodule
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">full_adder</span><span class="w"> </span><span class="p">(</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">     </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">a_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">     </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">b_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">     </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">carry_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">     </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">sum_o</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">     </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">carry_o</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="n">sum1</span><span class="p">;</span><span class="w">                                        </span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+<span class="mh">11</span><span class="o">|</span>
+<span class="mh">12</span><span class="o">|</span><span class="w">    </span><span class="n">half_adder</span><span class="w"> </span><span class="n">half_adder1</span><span class="w"> </span><span class="p">(</span>
+<span class="mh">13</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">a_i</span><span class="w">      </span><span class="p">(</span><span class="n">a_i</span><span class="p">),</span>
+<span class="mh">14</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">b_i</span><span class="w">      </span><span class="p">(</span><span class="n">b_i</span><span class="p">),</span>
+<span class="mh">15</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">sum_o</span><span class="w">    </span><span class="p">(</span><span class="n">sum1</span><span class="p">),</span>
+<span class="mh">16</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">carry_o</span><span class="w">  </span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="mh">17</span><span class="o">|</span><span class="w">    </span><span class="p">);</span><span class="w">    </span>
+<span class="mh">18</span><span class="o">|</span><span class="w">     </span>
+<span class="mh">19</span><span class="o">|</span><span class="w">    </span><span class="n">half_adder</span><span class="w"> </span><span class="n">half_adder2</span><span class="w"> </span><span class="p">(</span>
+<span class="mh">20</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">a_i</span><span class="w">      </span><span class="p">(</span><span class="n">carry_i</span><span class="p">),</span>
+<span class="mh">21</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">b_i</span><span class="w">      </span><span class="p">(</span><span class="n">sum1</span><span class="p">),</span>
+<span class="mh">22</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">sum_o</span><span class="w">    </span><span class="p">(</span><span class="n">sum_o</span><span class="p">),</span>
+<span class="mh">23</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">carry_o</span><span class="w">  </span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="mh">24</span><span class="o">|</span><span class="w">    </span><span class="p">);</span>
+<span class="mh">25</span><span class="o">|</span><span class="w">     </span>
+<span class="mh">26</span><span class="o">|</span><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">carry_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+<span class="mh">27</span><span class="o">|</span>
+<span class="mh">28</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 <h2 id="4_1">4位全加器</h2>
-<div class="highlight"><pre><span></span><code>module add_4 ( input [3:0] a, input [3:0]b, input c_in,           output [3:0] sum, output c_out ); //4位全加器
-   wire [3:0] c_tmp; 
-   full_adder i0 ( a[0], b[0], c_in, sum[0], c_tmp[0]); 
-   full_adder i1 ( a[1], b[1], c_tmp[0], sum[1], c_tmp[1] ); 
-   full_adder i2 ( a[2], b[2], c_tmp[1], sum[2], c_tmp[2] ); 
-   full_adder i3 ( a[3], b[3], c_tmp[2], sum[3], c_tmp[3] ); 
-   assign c_out = c_tmp[3];
-endmodule
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">adder_4</span><span class="w"> </span><span class="p">(</span><span class="w">     </span><span class="c1">// 4位全加器</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">a_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">b_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w">       </span><span class="n">carry_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sum_o</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">wire</span><span class="w">       </span><span class="n">carry_o</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">;</span><span class="w"> </span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="n">full_adder</span><span class="w"> </span><span class="n">i0</span><span class="w"> </span><span class="p">(</span><span class="n">a_i</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="n">b_i</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="n">carry_i</span><span class="p">,</span><span class="w">  </span><span class="n">sum_o</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">0</span><span class="p">]);</span><span class="w"> </span>
+<span class="mh">11</span><span class="o">|</span><span class="w">    </span><span class="n">full_adder</span><span class="w"> </span><span class="n">i1</span><span class="w"> </span><span class="p">(</span><span class="n">a_i</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span><span class="w"> </span><span class="n">b_i</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">0</span><span class="p">],</span><span class="w"> </span><span class="n">sum_o</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">1</span><span class="p">]);</span><span class="w"> </span>
+<span class="mh">12</span><span class="o">|</span><span class="w">    </span><span class="n">full_adder</span><span class="w"> </span><span class="n">i2</span><span class="w"> </span><span class="p">(</span><span class="n">a_i</span><span class="p">[</span><span class="mh">2</span><span class="p">],</span><span class="w"> </span><span class="n">b_i</span><span class="p">[</span><span class="mh">2</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">1</span><span class="p">],</span><span class="w"> </span><span class="n">sum_o</span><span class="p">[</span><span class="mh">2</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">2</span><span class="p">]);</span><span class="w"> </span>
+<span class="mh">13</span><span class="o">|</span><span class="w">    </span><span class="n">full_adder</span><span class="w"> </span><span class="n">i3</span><span class="w"> </span><span class="p">(</span><span class="n">a_i</span><span class="p">[</span><span class="mh">3</span><span class="p">],</span><span class="w"> </span><span class="n">b_i</span><span class="p">[</span><span class="mh">3</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">2</span><span class="p">],</span><span class="w"> </span><span class="n">sum_o</span><span class="p">[</span><span class="mh">3</span><span class="p">],</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">3</span><span class="p">]);</span><span class="w"> </span>
+<span class="mh">14</span><span class="o">|</span><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">carry_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c_tmp</span><span class="p">[</span><span class="mh">3</span><span class="p">];</span>
+<span class="mh">15</span><span class="o">|</span>
+<span class="mh">16</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 
 

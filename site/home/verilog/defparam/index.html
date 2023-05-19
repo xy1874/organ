@@ -1241,29 +1241,29 @@
 <h2 id="_2">宏定义</h2>
 <h3 id="1-define">1. <code>`define</code>语句</h3>
 <ul>
-<li>`define语句用于指定某个标识符来代表一个数字或字符串，如：</li>
+<li><code>`define</code>语句用于指定某个标识符来代表一个数字或字符串，如：</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cp">`define WIDTH 8</span>
-
-<span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="p">(...);</span>
-<span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="no">`WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span><span class="w">   </span><span class="c1">// 等同于: reg [7:0] cnt;</span>
-<span class="k">endmodule</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="no">`define</span><span class="w"> </span><span class="n">WIDTH</span><span class="w"> </span><span class="mh">8</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="p">(...);</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="no">`WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span><span class="w">   </span><span class="c1">// 等同于: reg [7:0] cnt;</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 <h3 id="2-ifdef-else-endif">2. <code>`ifdef - `else - `endif</code>语句</h3>
 <ul>
 <li>Verilog中的<code>`ifdef - `else - `endif</code>语句与C/C++中的<code>#ifdef-#else-#endif</code>类似，起条件综合的作用，如：</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="no">`ifdef</span><span class="w"> </span><span class="n">DEBUG</span>
-<span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
-<span class="no">`else</span>
-<span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
-<span class="no">`endif</span>
-
-<span class="no">`ifndef</span><span class="w"> </span><span class="n">DEBUG</span>
-<span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
-<span class="no">`else</span>
-<span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
-<span class="no">`endif</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="no">`ifdef</span><span class="w"> </span><span class="n">DEBUG</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="no">`else</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="no">`endif</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="no">`ifndef</span><span class="w"> </span><span class="n">DEBUG</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="c1">// 若未定义DEBUG，则此处的语句将会被综合</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="no">`else</span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="c1">// 若定义了DEBUG，则此处的语句将会被综合</span>
+<span class="mh">11</span><span class="o">|</span><span class="no">`endif</span>
 </code></pre></div>
 <h2 id="_3">参数</h2>
 <ul>
@@ -1274,39 +1274,41 @@
 <p>全局参数既可以在模块内部使用，也可以在实例化模块时修改全局参数。全局参数用关键字<code>parameter</code>定义。通常建议将全局参数定义在模块的输入/输出信号列表前面，如：</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
-<span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="p">,</span>
-<span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span>
-<span class="p">)(</span>
-<span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">,</span>
-<span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rst_n_i</span><span class="p">,</span>
-<span class="w">    </span><span class="p">......</span>
-<span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="p">)(</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rstn_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">10</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 <ul>
-<li>在实例化上述模块时，可修改PARAM1和PARAM2，如：</li>
+<li>在实例化上述模块时，可修改<code>PARAM1</code>和<code>PARAM2</code>，如：</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
-<span class="w">    </span><span class="p">.</span><span class="n">PARAM1</span><span class="w">     </span><span class="p">(</span><span class="mh">16</span><span class="p">),</span>
-<span class="w">    </span><span class="p">.</span><span class="n">PARAM2</span><span class="w">     </span><span class="p">(</span><span class="mh">4</span><span class="p">)</span>
-<span class="p">)</span><span class="w"> </span><span class="n">U_smodule_0</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="p">.</span><span class="n">clk_i</span><span class="w">      </span><span class="p">(</span><span class="n">clk</span><span class="p">),</span>
-<span class="w">    </span><span class="p">.</span><span class="n">rst_n_i</span><span class="w">    </span><span class="p">(</span><span class="n">rst_n</span><span class="p">),</span>
-<span class="w">    </span><span class="p">......</span>
-<span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="p">.</span><span class="n">PARAM1</span><span class="w">      </span><span class="p">(</span><span class="mh">16</span><span class="p">),</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="p">.</span><span class="n">PARAM2</span><span class="w">      </span><span class="p">(</span><span class="mh">4</span><span class="p">)</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="p">)</span><span class="w"> </span><span class="n">U_smodule_0</span><span class="w"> </span><span class="p">(</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="p">.</span><span class="n">clk_i</span><span class="w">       </span><span class="p">(</span><span class="n">clk</span><span class="p">),</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="p">.</span><span class="n">rstn_i</span><span class="w">      </span><span class="p">(</span><span class="n">rst_n</span><span class="p">),</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="p">);</span>
 </code></pre></div>
 <ul>
 <li>
 <p>局部参数只能在模块内部使用，不可在实例化模块时修改局部参数。</p>
 </li>
 <li>
-<p>不需在模块实例化时设置的参数，应将其定义为局部参数（localparam）。局部参数用关键字<code>localparam</code>定义，如：</p>
+<p>不需在模块实例化时设置的参数，应将其定义为局部参数。局部参数用关键字<code>localparam</code>定义，如：</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">(...);</span>
-<span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">IDLE</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">STAT0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h2</span><span class="p">;</span>
-<span class="k">endmodule</span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">(...);</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">IDLE</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h1</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">localparam</span><span class="w"> </span><span class="n">STAT0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">3&#39;h2</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 
 

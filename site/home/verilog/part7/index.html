@@ -1199,9 +1199,13 @@
 <p><img alt="img" src="../part7.assets/clip_image010.jpg" /></p>
 <h2 id="_2">模块实例化方法</h2>
 <ul>
-<li>调用模块实例的一般形式为：</li>
-<li>&lt;模块名&gt;&lt;参数列表&gt;&lt;实例名&gt;（&lt;端口列表&gt;）;</li>
-<li><code>module_name   instance_name(port_associations) ;</code></li>
+<li>
+<p>调用模块实例的一般形式为：</p>
+<ul>
+<li>&lt;模块名&gt;&lt;参数列表&gt;&lt;实例名&gt;(&lt;端口列表&gt;);</li>
+<li><code>module_name instance_name(port_associations);</code></li>
+</ul>
+</li>
 <li>
 <p>其中参数列表是传递到子模块的参数值。</p>
 </li>
@@ -1209,39 +1213,54 @@
 <p>信号端口可以通过位置或名称关联，但是关联方式不能够混合使用。</p>
 </li>
 <li>
-<p>定义模块：<code>module Design(端口1，端口2，端口3……);</code></p>
-</li>
+<p>定义模块：<code>module Design(port1, port2, port3, ......);</code></p>
+<ul>
 <li>引用时，严格按照模块定义的端口顺序来连接，不用标明原模块定义时规定的端口名。<ul>
-<li><code>Design u_1(u_1的端口1，u_1的端口2，……)；</code>//和Design对应</li>
+<li><code>Design u_1(u1_port1, u1_port2, ......);    // 和Design对应</code></li>
 </ul>
 </li>
 <li>引用时，用”.”符号，标明原模块定义时规定的端口名。<ul>
-<li><code>Design u_2(  .(端口1(u_1的端口1), .(端口2(u_1的端口2),…… );</code></li>
+<li><code>Design u_2(.(port1(u1_port1), .(port2(u1_port2), ......);</code></li>
 </ul>
 </li>
 </ul>
-<hr />
-<div class="highlight"><pre><span></span><code> module  and1 (C,A,B);
- input A,B;
- output C;
- ...
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">代码实例 <img alt="🌰" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f330.svg" title=":chestnut:" /></p>
+<div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">and1</span><span class="w"> </span><span class="p">(</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">  </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">A</span><span class="p">,</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">  </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">B</span><span class="p">,</span>
+<span class="mh">4</span><span class="o">|</span><span class="w">  </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="n">C</span>
+<span class="mh">5</span><span class="o">|</span><span class="p">);</span>
+<span class="mh">6</span><span class="o">|</span>
+<span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">8</span><span class="o">|</span>
+<span class="mh">9</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
 <ul>
 <li>
-<p><code>and1 A1 (T3,A,B);</code> //实例化时采用位置关联。</p>
+<p>实例化时采用接口信号的位置/顺序来关联：<code>and1 A1 (T3,A,B);</code></p>
 </li>
 <li>
-<p><code>and1 A2 (.C(T3), .A(A),.B(B) )；</code>//实例化时采用名字关联</p>
+<p>实例化时采用接口信号名字来关联：<code>and1 A2 (.C(T3), .A(A), .B(B))；</code></p>
 </li>
+</ul>
+</div>
+<ul>
 <li>
 <p><code>port_expr</code>可以是以下的任何类型：</p>
+<ul>
+<li>标识符（<code>reg</code>或<code>net</code>）如<code>.C(T3)</code>，<code>T3</code>为<code>wire</code>型标识符。</li>
+<li>位选择，如 <code>.C(D[0])</code>，<code>C</code>端口接到<code>D</code>信号的第<code>0</code>位。</li>
+<li>部分选择，如<code>.Bus(Din[5:4])</code>。</li>
+<li>上述类型的合并，如<code>.addr({A1，A2[1:0]})</code>。</li>
+<li>表达式（只适用于输入端口），如<code>.A(wire Zire = 0)</code>。</li>
+</ul>
 </li>
-<li>标识符（reg 或net)如<code>.C（T3）</code>，T3 为wire 型标识符。</li>
-<li>位选择，如 <code>.C（D[0]）</code>，C 端口接到D 信号的第0bit 位。</li>
-<li>部分选择，如<code>.Bus（Din[5：4]）</code>。</li>
-<li>上述类型的合并，如<code>.Addr（{ A1，A2[1：0]}</code>。</li>
-<li>表达式（只适用于输入端口），如<code>.A（wire Zire = 0 ）</code>。</li>
-<li>例化名不能为元模块名或关键字。</li>
+<li>
+<p>例化名不能为元模块名或关键字。</p>
+</li>
 </ul>
 
 

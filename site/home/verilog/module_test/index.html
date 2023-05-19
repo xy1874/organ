@@ -534,40 +534,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          模块的测试
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         模块的测试
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    四位全加器模块测试（接上例）
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1155,21 +1124,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    四位全加器模块测试（接上例）
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1194,40 +1148,75 @@
 <ul>
 <li>激励模块通常是顶层模块</li>
 <li>激励信号数据类型要求为reg，以便保持激励值不变，直至执行到下一跳激励语句为止</li>
-<li>输出信号的数据类型要求为wire，以便能随时跟踪激励信号的变化</li>
+<li>
+<p>输出信号的数据类型要求为wire，以便能随时跟踪激励信号的变化</p>
+</li>
+<li>
+<p>Testbench框架：</p>
+</li>
 </ul>
-<div class="highlight"><pre><span></span><code>  &#39;timescale  1ns/1ns       //时间单位为1ns，精度为1ns
-   module module_name_sim();         //模块名（无端口声明列表）
-         reg [信号位宽] ;             //激励信号声明
-         wire [信号位宽] ;           //输出信号声明
-         module_name    instance_name (port_associations) ;     //实例化设计模块
-       initial 
-        begin       //激励信号
-            PS=1’b0;PD1=1’b1;      //语句1
-                   #5 PS=1’b0;PD1=1’b1;      //语句2
-                                ……  
-             end    
-    endmodule
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="no">`timescale</span><span class="w">  </span><span class="mh">1</span><span class="n">ns</span><span class="o">/</span><span class="mh">1</span><span class="n">ns</span><span class="w">                 </span><span class="c1">// 时间单位为1ns，精度为1ns</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">module_name_sim</span><span class="p">();</span><span class="w">           </span><span class="c1">// 模块名（无端口声明列表）</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="c1">// 输入到待验证模块的激励信号</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">in1</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">in2</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="c1">// 对接待验证模块的输出信号</span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out1</span><span class="p">;</span>
+<span class="mh">11</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w">       </span><span class="n">out2</span><span class="p">;</span>
+<span class="mh">12</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">13</span><span class="o">|</span><span class="w">    </span>
+<span class="mh">14</span><span class="o">|</span><span class="w">    </span><span class="n">module_name</span><span class="w"> </span><span class="n">instance_name</span><span class="w"> </span><span class="p">(</span><span class="w">     </span><span class="c1">// 实例化待验证模块</span>
+<span class="mh">15</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">port1_i</span><span class="w">    </span><span class="p">(</span><span class="n">in1</span><span class="p">),</span>
+<span class="mh">16</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">port2_i</span><span class="w">    </span><span class="p">(</span><span class="n">in2</span><span class="p">),</span>
+<span class="mh">17</span><span class="o">|</span><span class="w">        </span><span class="p">......</span>
+<span class="mh">18</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">port1_o</span><span class="w">    </span><span class="p">(</span><span class="n">out1</span><span class="p">),</span>
+<span class="mh">19</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">port2_o</span><span class="w">    </span><span class="p">(</span><span class="n">out2</span><span class="p">),</span>
+<span class="mh">20</span><span class="o">|</span><span class="w">        </span><span class="p">......</span>
+<span class="mh">21</span><span class="o">|</span><span class="w">    </span><span class="p">);</span>
+<span class="mh">22</span><span class="o">|</span><span class="w">    </span>
+<span class="mh">23</span><span class="o">|</span><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span><span class="w">                   </span><span class="c1">// 提供激励信号</span>
+<span class="mh">24</span><span class="o">|</span><span class="w">     </span><span class="n">in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h12</span><span class="p">;</span>
+<span class="mh">25</span><span class="o">|</span><span class="w">        </span><span class="n">in2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4&#39;hF</span><span class="p">;</span>
+<span class="mh">26</span><span class="o">|</span><span class="w">        </span>
+<span class="mh">27</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w">  </span><span class="c1">// 5ns后执行下面的语句</span>
+<span class="mh">28</span><span class="o">|</span><span class="w">        </span><span class="n">in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h34</span><span class="p">;</span>
+<span class="mh">29</span><span class="o">|</span><span class="w">        </span><span class="n">in2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4&#39;hE</span><span class="p">;</span>
+<span class="mh">30</span><span class="o">|</span><span class="w">        </span><span class="p">......</span><span class="w">   </span>
+<span class="mh">31</span><span class="o">|</span><span class="w">    </span><span class="k">end</span><span class="w">  </span>
+<span class="mh">32</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
-<h2 id="_2">四位全加器模块测试（接上例）</h2>
-<div class="highlight"><pre><span></span><code>timescale 1ns / 1ps 
-module add_4_sim();
-         reg [3:0] A,B;
-         reg CI;
-         wire [3:0] S;
-         wire CO;
-         add_4 A1(A,B,CI,S,CO);
-         initial
-              begin
-                   A=4&#39;d0;B=4&#39;d0;CI=1&#39;b0;
-                   #5 A=4&#39;d3;B=4&#39;d4;CI=1&#39;B0;
-                   #5 A=4&#39;d2;B=4&#39;d5;CI=1&#39;b1;
-                   #5 A=4&#39;d9;B=4&#39;d9;CI=1&#39;b1;
-                   #5 A=4&#39;d0;B=4&#39;d0;CI=1&#39;b0;
-              end
-endmodule
+<div class="admonition example">
+<p class="admonition-title">代码实例 <img alt="🌰" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f330.svg" title=":chestnut:" /></p>
+<ul>
+<li>四位全加器模块测试（接上例）</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="no">`timescale</span><span class="w"> </span><span class="mh">1</span><span class="n">ns</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mh">1</span><span class="n">ps</span><span class="w"> </span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">add_4_sim</span><span class="p">();</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="n">CI</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="n">CO</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="n">adder_4</span><span class="w"> </span><span class="n">DUT</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">CI</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">CO</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">11</span><span class="o">|</span><span class="w">        </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span><span class="n">CI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<span class="mh">12</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d3</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d4</span><span class="p">;</span><span class="w"> </span><span class="n">CI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="p">&#39;</span><span class="n">B0</span><span class="p">;</span>
+<span class="mh">13</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d2</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d5</span><span class="p">;</span><span class="w"> </span><span class="n">CI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<span class="mh">14</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d9</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d9</span><span class="p">;</span><span class="w"> </span><span class="n">CI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+<span class="mh">15</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span><span class="n">CI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+<span class="mh">16</span><span class="o">|</span><span class="w">    </span><span class="k">end</span>
+<span class="mh">17</span><span class="o">|</span><span class="w">    </span>
+<span class="mh">18</span><span class="o">|</span><span class="k">endmodule</span>
 </code></pre></div>
+<ul>
+<li>仿真波形：</li>
+</ul>
 <p><img alt="img" src="../module_test.assets/clip_image021.jpg" /></p>
+</div>
 
 
 
