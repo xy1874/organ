@@ -1139,7 +1139,7 @@
 
 <h1 id="_1">模块测试</h1>
 <ul>
-<li>测试平台（test bench）是一个无输入，有输出的顶层调用模块。</li>
+<li>测试平台（Test Bench）是一个无输入，有输出的顶层调用模块。</li>
 <li>一个简单的测试平台包括：</li>
 <li>产生激励信号；</li>
 <li>实例化待测模块，并将激励信号加入到待测模块中。</li>
@@ -1147,9 +1147,9 @@
 <p><img alt="image-20200328185149852" src="../module_test.assets/image-20200328185149852.png" /></p>
 <ul>
 <li>激励模块通常是顶层模块</li>
-<li>激励信号数据类型要求为reg，以便保持激励值不变，直至执行到下一跳激励语句为止</li>
+<li>激励信号数据类型要求为<code>reg</code>，以便保持激励值不变，直至执行到下一跳激励语句为止</li>
 <li>
-<p>输出信号的数据类型要求为wire，以便能随时跟踪激励信号的变化</p>
+<p>输出信号的数据类型要求为<code>wire</code>，以便能随时跟踪激励信号的变化</p>
 </li>
 <li>
 <p>Testbench框架：</p>
@@ -1178,7 +1178,7 @@
 <span class="mh">21</span><span class="o">|</span><span class="w">    </span><span class="p">);</span>
 <span class="mh">22</span><span class="o">|</span><span class="w">    </span>
 <span class="mh">23</span><span class="o">|</span><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span><span class="w">                   </span><span class="c1">// 提供激励信号</span>
-<span class="mh">24</span><span class="o">|</span><span class="w">     </span><span class="n">in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h12</span><span class="p">;</span>
+<span class="mh">24</span><span class="o">|</span><span class="w">        </span><span class="n">in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h12</span><span class="p">;</span>
 <span class="mh">25</span><span class="o">|</span><span class="w">        </span><span class="n">in2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4&#39;hF</span><span class="p">;</span>
 <span class="mh">26</span><span class="o">|</span><span class="w">        </span>
 <span class="mh">27</span><span class="o">|</span><span class="w">        </span><span class="p">#</span><span class="mh">5</span><span class="w">  </span><span class="c1">// 5ns后执行下面的语句</span>
