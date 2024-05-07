@@ -109,3 +109,5 @@ export PATH=$PATH:/opt/riscv_gnu/riscv64-unknown-elf/bin/
 
 <center><img src="../assets/a-6.png" width = 600></center>
 <center>图A-6 测试RV32交叉编译环境</center>
+
+&emsp;&emsp;若编译C程序时出现“error while loading shared libraries: libmpc.so.3”的错误提示，则在终端执行`sudo apt install libmpc3`以安装所需的库即可。

@@ -972,6 +972,7 @@
 <p>&emsp;&emsp;编写HelloWorld程序，执行命令<code>riscv32-unknown-elf-gcc helloworld.c</code>对其进行编译，然后执行命令<code>spike --isa=rv32g pk a.out</code>对其进行仿真运行，如图A-6所示。</p>
 <p><center><img src="../assets/a-6.png" width = 600></center>
 <center>图A-6 测试RV32交叉编译环境</center></p>
+<p>&emsp;&emsp;若编译C程序时出现“error while loading shared libraries: libmpc.so.3”的错误提示，则在终端执行<code>sudo apt install libmpc3</code>以安装所需的库即可。</p>
 
 
 
