@@ -4,4 +4,4 @@
     <embed src = "../assets/RV32G-Instructions-List.pdf" width="100%" height="1088">
 
 === "RISC-V中文手册"
-    <embed src = "http://staff.ustc.edu.cn/~llxx/cod/reference_books/RISC-V-Reader-Chinese-v2p12017.pdf" width="100%" height="1088">
+    <embed src = "../assets/RISC-V-Reader-Chinese-v2p12017.pdf" width="100%" height="1088">
