@@ -1,30 +1,36 @@
-site_name: 计算机组成原理实验（2023春季） | 哈工大（深圳）
-copyright: 'Copyright &copy; 2020 - 2023 哈尔滨工业大学（深圳）'
+site_name: 计算机组成原理实验（2024春季） | 哈工大（深圳）
+copyright: 'Copyright &copy; 2020 - 2024 哈尔滨工业大学（深圳）'
 repo_name: 'HITSZ-COMP2008'
 repo_url: 'https://gitee.com/hitsz-cslab/organ'
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - mdx_math:
+      enable_dollar_delimiter: True
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed
   - pymdownx.tilde
-  - admonition
-  - mdx_math:
-      enable_dollar_delimiter: True
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
@@ -34,8 +40,11 @@ theme:
   language: 'zh'
   name: material
   features:
-    - navigation.tabs
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
     - navigation.expand
+    - navigation.tabs
   # favicon: assets/favicon.svg
   icon:
     logo: fontawesome/solid/computer
@@ -71,31 +80,33 @@ nav:
       - 4位全加器设计实例: home/verilog/part8.md
     - 实验提交说明: home/operation.md
   - 实验1 从C语言到机器码: 
-    - 实验概述: lab1/overview.md
-    - 实验原理: lab1/theory.md
-    - 实验步骤: lab1/step.md
-    - 实验提交: lab1/submit.md
+    - 实验概述: lab1/0-overview.md
+    - 实验原理: lab1/1-theory.md
+    - 实验步骤: 
+      - 开始之前: lab1/2-step0.md
+      - C语言到汇编: lab1/2-step1.md
+      - 编写汇编程序: lab1/2-step2.md
+    - 附加题: lab1/3-extra.md
+    - 验收与提交: lab1/4-submit.md
     - 附录:
-      - A. 实验环境安装: lab1/envir.md
-      - B. Ubuntu常用命令: lab1/lnxcmd.md
-      - C. Vim常用指令: lab1/vim.md
-      - D. Text Editor: lab1/text.md
-      - E. 虚拟机共享文件: lab1/vmshare.md
-  - 实验2 寻找回文子串: 
-    - 实验概述: lab2/overview.md
-    - 实验原理: lab2/theory.md
-    - 实验步骤: lab2/step.md
-    - 附加题: lab2/extra.md
-    - 实验提交: lab2/submit.md
-  - 实验3 浮点运算器设计:
-    - 实验概述: lab3/overview.md
-    - 实验原理: lab3/theory.md
-    - 实验步骤: lab3/step.md
-    - 附加题: lab3/extra.md
-    - 实验提交: lab3/submit.md
-  - 实验4 AXI-Lite总线接口设计:
-    - 实验概述: lab4/overview.md
-    - 实验原理: lab4/theory.md
-    - 实验步骤: lab4/step.md
-    - 实验提交: lab4/submit.md
-    - 附录：Block Design: lab4/bd.md
+      - A. 实验环境安装: lab1/A-envir.md
+      - B. Linux常用命令: lab1/B-lnxcmd.md
+      - C. RISC-V参考资料: lab1/C-rv_ref.md
+  # - 实验2 原码除法器设计:
+  #   - 实验概述: lab2/0-overview.md
+  #   - 实验原理: lab2/1-theory.md
+  #   - 实验步骤: lab2/2-step.md
+  #   - 附加题: lab2/3-extra.md
+  #   - 实验提交: lab2/4-submit.md
+  # - 实验3 高速缓存器设计:
+  #   - 实验概述: lab3/overview.md
+  #   - 实验原理: lab3/theory.md
+  #   - 实验步骤: lab3/step.md
+  #   - 附加题: lab3/extra.md
+  #   - 实验提交: lab3/submit.md
+  # - 实验4* AXI总线接口设计:
+  #   - 实验概述: lab4/overview.md
+  #   - 实验原理: lab4/theory.md
+  #   - 实验步骤: lab4/step.md
+  #   - 实验提交: lab4/submit.md
+  #   - 附录：Block Design: lab4/bd.md
