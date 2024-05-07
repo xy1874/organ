@@ -8,7 +8,7 @@
 &emsp;&emsp;课上检查字符串匹配的汇编程序能否正确运行：<font color = red>1.2</font>分
 
 &emsp;&emsp;【附加题】  
-&emsp;&emsp;&emsp;&emsp;课上检查字符串匹配的汇编程序是否符合要求：<font color = green>**+0.7**</font>分
+&emsp;&emsp;&emsp;&emsp;课上检查字符串匹配的汇编程序是否符合要求：<font color = green>**+0.5**</font>分
 
 ## 提交要求
 
