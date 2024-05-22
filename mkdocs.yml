@@ -92,12 +92,12 @@ nav:
       - A. 实验环境安装: lab1/A-envir.md
       - B. Linux常用命令: lab1/B-lnxcmd.md
       - C. RISC-V参考资料: lab1/C-rv_ref.md
-  # - 实验2 原码除法器设计:
-  #   - 实验概述: lab2/0-overview.md
-  #   - 实验原理: lab2/1-theory.md
-  #   - 实验步骤: lab2/2-step.md
-  #   - 附加题: lab2/3-extra.md
-  #   - 实验提交: lab2/4-submit.md
+  - 实验2 原码除法器设计:
+    - 实验概述: lab2/0-overview.md
+    - 实验原理: lab2/1-theory.md
+    - 实验步骤: lab2/2-step.md
+    - 附加题: lab2/3-extra.md
+    - 实验提交: lab2/4-submit.md
   # - 实验3 高速缓存器设计:
   #   - 实验概述: lab3/overview.md
   #   - 实验原理: lab3/theory.md

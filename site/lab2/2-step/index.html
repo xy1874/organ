@@ -1,0 +1,1441 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1-theory/">
+      
+      
+        <link rel="next" href="../3-extra/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>实验步骤 - 计算机组成原理实验（2024春季） | 哈工大（深圳）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            计算机组成原理实验（2024春季） | 哈工大（深圳）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              实验步骤
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到夜晚模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换到夜晚模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        实验须知
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../lab1/0-overview/" class="md-tabs__link">
+        实验1 从C语言到机器码
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../0-overview/" class="md-tabs__link md-tabs__link--active">
+        实验2 原码除法器设计
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    计算机组成原理实验（2024春季） | 哈工大（深圳）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          实验须知
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          实验须知
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        实验介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Verilog语法回顾
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Verilog语法回顾
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part0/" class="md-nav__link">
+        初学Verilog的几点提醒
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part1/" class="md-nav__link">
+        模块的基本结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part2/" class="md-nav__link">
+        标识符和数据类型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part3/" class="md-nav__link">
+        运算符及表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part4/" class="md-nav__link">
+        逻辑门的描述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part5/" class="md-nav__link">
+        赋值语句和块语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part6/" class="md-nav__link">
+        条件语句和循环语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/defparam/" class="md-nav__link">
+        宏定义和参数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part7/" class="md-nav__link">
+        模块的实例化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/module_test/" class="md-nav__link">
+        模块的测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part8/" class="md-nav__link">
+        4位全加器设计实例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/operation/" class="md-nav__link">
+        实验提交说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          实验1 从C语言到机器码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          实验1 从C语言到机器码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/0-overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/1-theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          实验步骤
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          实验步骤
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step0/" class="md-nav__link">
+        开始之前
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step1/" class="md-nav__link">
+        C语言到汇编
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step2/" class="md-nav__link">
+        编写汇编程序
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/3-extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/4-submit/" class="md-nav__link">
+        验收与提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          附录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          附录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/A-envir/" class="md-nav__link">
+        A. 实验环境安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/B-lnxcmd/" class="md-nav__link">
+        B. Linux常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/C-rv_ref/" class="md-nav__link">
+        C. RISC-V参考资料
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          实验2 原码除法器设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          实验2 原码除法器设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0-overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验步骤
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        实验步骤
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 除法器设计
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 除法器设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 测试用例说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 除法器集成
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 除法器集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 测试用例说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 除法器设计
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 除法器设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 测试用例说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 除法器集成
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 除法器集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 测试用例说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 操作步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">实验步骤</h1>
+<h2 id="1">1. 除法器设计</h2>
+<h3 id="11">1.1 测试用例说明</h3>
+<p>&emsp;&emsp;TestBench提供了8个测试用例，如表3-1所示。</p>
+<p><center>表3-1 lab2_div工程中的测试用例</center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">测试用例(DEC)</th>
+<th align="center">测试用例(HEX)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">
+<script type="math/tex">14 \div 3 = 4 \cdots 2</script>
+</td>
+<td align="center"><code>0x0E</code> <script type="math/tex">\div</script>
+<code>0x03</code> = <code>0x04</code> <script type="math/tex">\cdots</script>
+<code>0x02</code></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">
+<script type="math/tex">111 \div 31 = 3 \cdots 18</script>
+</td>
+<td align="center"><code>0x6F</code> <script type="math/tex">\div</script>
+<code>0x1F</code> = <code>0x03</code> <script type="math/tex">\cdots</script>
+<code>0x12</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">
+<script type="math/tex">-73 \div 6 = -12 \cdots -1</script>
+</td>
+<td align="center"><code>0xC9</code> <script type="math/tex">\div</script>
+<code>0x06</code> = <code>0x8C</code> <script type="math/tex">\cdots</script>
+<code>0x81</code></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">
+<script type="math/tex">-49 \div 11 = -4 \cdots -5</script>
+</td>
+<td align="center"><code>0xB1</code> <script type="math/tex">\div</script>
+<code>0x0B</code> = <code>0x84</code> <script type="math/tex">\cdots</script>
+<code>0x85</code></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">
+<script type="math/tex">120 \div -33 = -3 \cdots 21</script>
+</td>
+<td align="center"><code>0x78</code> <script type="math/tex">\div</script>
+<code>0xA1</code> = <code>0x83</code> <script type="math/tex">\cdots</script>
+<code>0x15</code></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">
+<script type="math/tex">23 \div -15 = -1 \cdots 8</script>
+</td>
+<td align="center"><code>0x17</code> <script type="math/tex">\div</script>
+<code>0x8F</code> = <code>0x81</code> <script type="math/tex">\cdots</script>
+<code>0x08</code></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">
+<script type="math/tex">-19 \div -10 = 1 \cdots -9</script>
+</td>
+<td align="center"><code>0x93</code> <script type="math/tex">\div</script>
+<code>0x8A</code> = <code>0x01</code> <script type="math/tex">\cdots</script>
+<code>0x89</code></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">
+<script type="math/tex">-53 \div -25 = 2 \cdots -3</script>
+</td>
+<td align="center"><code>0xB5</code> <script type="math/tex">\div</script>
+<code>0x99</code> = <code>0x02</code> <script type="math/tex">\cdots</script>
+<code>0x83</code></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="12">1.2 操作步骤</h3>
+<p>&emsp;&emsp;（1）从实验包下载并打开模板工程 lab2_div，基于恢复余数法或加减交替法，<strong>完成<code>divider</code>模块</strong>。</p>
+<p>&emsp;&emsp;（2）运行功能仿真，通过分析波形对所设计的原码除法器进行调试和验证。必要时可将除法器内部关键信号添加到波形窗口，如图3-1所示。</p>
+<p><center><img src="../assets/3-1.png" width = 100%></center>
+<center>图3-1 添加模块内部信号到仿真波形窗口</center></p>
+<div class="admonition info">
+<p class="admonition-title">仿真信号说明 <img alt="📄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c4.svg" title=":page_facing_up:" /></p>
+<p>&emsp;&emsp;在图3-1中，带有“<code>dut_</code>”前缀的信号是除法器模块的接口信号，而带有<code>tb_</code>前缀的信号则表示TestBench的信号。其中，<code>tb_i</code>表示测试用例的编号；<code>tb_ans_z</code>和<code>tb_ans_r</code>分别表示当前测试用例的商和余数的正确值；<code>tb_z_err</code>和<code>tb_r_err</code>分别表示除法器的商和余数是否有错误的标志信号。</p>
+</div>
+<p>&emsp;&emsp;<strong>运行功能仿真时，点击工具栏的“Run All”按钮</strong>，如图3-2所示。此时，TestBench将一直运行，直到发现错误，或通过了所有测试用例。</p>
+<p><center><img src="../assets/3-2.png" width = 380></center>
+<center>图3-2 点击“Run All”按钮，一键运行所有测试用例</center></p>
+<p>&emsp;&emsp;TestBench在复位后，将遵照<a href="../1-theory/#22" target="_blank">实验原理-2.2节</a>图2-4所示的时序，发出第一个测试用例。当TestBench检测到<code>divider</code>模块的<code>busy</code>信号变成低电平后，将检查除法结果的正确性，如果发现错误，将在Vivado控制台报错并结束仿真，如图3-3所示；如果除法结果正确，则继续发出下一个测试用例。</p>
+<p><center><img src="../assets/3-3.png" width = 430></center>
+<center>图3-3 TestBench检查到除法结果错误</center></p>
+<p>&emsp;&emsp;若成功通过了所有的测试用例，则TestBench将在控制台打印通过TestBench的提示信息，如图3-4所示。</p>
+<p><center><img src="../assets/3-4.png" width = 430></center>
+<center>图3-4 通过所有测试用例后的提示信息</center></p>
+<h2 id="2">2. 除法器集成</h2>
+<h3 id="21">2.1 测试用例说明</h3>
+<p>&emsp;&emsp;SoC工程包含32位的多周期RISC-V CPU，能够执行部分常用的整数指令。因此，SoC工程的测试用例是以汇编程序的形式提供的。</p>
+<p>&emsp;&emsp;从实验包下载测试程序 mul_div_test.asm，其部分代码如图3-5所示。</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">.text</span>
+<span class="nl">MAIN:</span>
+<span class="w">    </span><span class="nf">lui</span><span class="w"> </span><span class="no">a7</span><span class="p">,</span><span class="w"> </span><span class="mi">0xFFFF1</span><span class="w">         </span><span class="c1"># 将LED外设的地址0xFFFF1000赋值到a7寄存器</span>
+
+<span class="w">    </span><span class="c1"># test0</span>
+<span class="w">    </span><span class="nf">lui</span><span class="w">  </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="mi">0x40000</span>
+<span class="w">    </span><span class="nf">ori</span><span class="w">  </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="mi">0x7B</span><span class="w">       </span><span class="c1"># 将被除数x赋值到t0寄存器</span>
+<span class="w">    </span><span class="nf">ori</span><span class="w">  </span><span class="no">t1</span><span class="p">,</span><span class="w"> </span><span class="no">zero</span><span class="p">,</span><span class="w"> </span><span class="mi">0x165</span><span class="w">    </span><span class="c1"># 将除数y赋值到t1寄存器</span>
+<span class="w">    </span><span class="nf">mul</span><span class="w">  </span><span class="no">a0</span><span class="p">,</span><span class="w"> </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="no">t1</span><span class="w">     </span><span class="c1"># 计算x*y并将乘积的 **低32位** 赋值给a0寄存器</span>
+<span class="w">    </span><span class="nf">sw</span><span class="w">   </span><span class="no">a0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">(</span><span class="no">a7</span><span class="p">)</span><span class="w">          </span><span class="c1"># 将a0寄存器的值写入到LED外设，从而在LED上显示a0的值</span>
+<span class="w">    </span><span class="nf">mulh</span><span class="w"> </span><span class="no">a1</span><span class="p">,</span><span class="w"> </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="no">t1</span><span class="w">     </span><span class="c1"># 计算x*y并将乘积的 **高32位** 赋值给a1寄存器</span>
+<span class="w">    </span><span class="nf">sw</span><span class="w">   </span><span class="no">a1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">(</span><span class="no">a7</span><span class="p">)</span><span class="w">          </span><span class="c1"># 在LED上显示a1的值</span>
+<span class="w">    </span><span class="nf">div</span><span class="w">  </span><span class="no">a2</span><span class="p">,</span><span class="w"> </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="no">t1</span><span class="w">     </span><span class="c1"># 计算x/y并将商赋值给a2寄存器</span>
+<span class="w">    </span><span class="nf">sw</span><span class="w">   </span><span class="no">a2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">(</span><span class="no">a7</span><span class="p">)</span><span class="w">          </span><span class="c1"># 在LED上显示a2的值</span>
+<span class="w">    </span><span class="nf">rem</span><span class="w">  </span><span class="no">a3</span><span class="p">,</span><span class="w"> </span><span class="no">t0</span><span class="p">,</span><span class="w"> </span><span class="no">t1</span><span class="w">     </span><span class="c1"># 计算x%y并将余数赋值给a3寄存器</span>
+<span class="w">    </span><span class="nf">sw</span><span class="w">   </span><span class="no">a3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">(</span><span class="no">a7</span><span class="p">)</span><span class="w">          </span><span class="c1"># 在LED上显示a3的值</span>
+
+<span class="w">    </span><span class="na">......</span>
+
+<span class="nl">END_LOOP:</span>
+<span class="w">    </span><span class="nf">addi</span><span class="w"> </span><span class="no">zero</span><span class="p">,</span><span class="w"> </span><span class="no">zero</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="nf">jal</span><span class="w">  </span><span class="no">zero</span><span class="p">,</span><span class="w"> </span><span class="no">END_LOOP</span>
+</code></pre></div></td></tr></table></div>
+<center>图3-5 SoC工程的乘除法测试程序</center></p>
+<p>&emsp;&emsp;测试程序 mul_div_test.asm 共提供了4组测试用例，如表3-2所示。</p>
+<p><center>表3-2 SoC工程中的乘除法测试用例</center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="center">
+<script type="math/tex">x</script>
+</th>
+<th align="center">
+<script type="math/tex">y</script>
+</th>
+<th align="center">
+<script type="math/tex">x \times y</script>
+</th>
+<th align="center">
+<script type="math/tex">x \div y</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0x4000_007B</code></td>
+<td align="center"><code>0x165</code></td>
+<td align="center"><code>0x59_4000_AB87</code></td>
+<td align="center"><code>0x2D_E4C0</code> ... <code>0xBB</code></td>
+</tr>
+<tr>
+<td align="center"><code>-26</code></td>
+<td align="center"><code>5</code></td>
+<td align="center"><code>0xFFFF_FFFF_FFFF_FF7E</code></td>
+<td align="center"><code>0xFFFF_FFFB</code> ... <code>0xFFFF_FFFF</code></td>
+</tr>
+<tr>
+<td align="center"><code>0x4567_0064</code></td>
+<td align="center"><code>-13</code></td>
+<td align="center"><code>0xFFFF_FFFC_79C4_FAEC</code></td>
+<td align="center"><code>0xFAA9_4EBE</code> ... <code>0xA</code></td>
+</tr>
+<tr>
+<td align="center"><code>-306</code></td>
+<td align="center"><code>-28</code></td>
+<td align="center"><code>0x2178</code></td>
+<td align="center"><code>0xA</code> ... <code>0xFFFF_FFE6</code></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="22">2.2 操作步骤</h3>
+<p>&emsp;&emsp;从实验包下载SoC工程 miniRV_AXI，解压后阅读readme文档。</p>
+<p>&emsp;&emsp;打开SoC工程后，依次展开<code>soc</code>-&gt;<code>U_cpu</code>-&gt;<code>U_core</code>-&gt;<code>U_ALU</code>，找到最内层的乘法器模块<code>U_mul</code>和除法器模块<code>U_div</code>。其中，<u>乘法器模块是附加题的内容</u>。</p>
+<div class="admonition danger">
+<p class="admonition-title">注意事项 <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /></p>
+<p>&emsp;&emsp;若只完成必做题，除了divider模块（<code>divider.v</code>），不要修改SoC工程的其他任何文件！</p>
+<p>&emsp;&emsp;若完成必做题和附加题，除了divider模块（<code>divider.v</code>）和multiplier模块（<code>multiplier.v</code>），不要修改SoC工程的其他任何文件！</p>
+</div>
+<p>&emsp;&emsp;双击打开乘除法器模块的代码，可见其内部是用运算符实现乘除法功能的，如图3-5所示。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">divider.v</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="no">`timescale</span><span class="w"> </span><span class="mh">1</span><span class="n">ns</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mh">1</span><span class="n">ps</span>
+
+<span class="k">module</span><span class="w"> </span><span class="n">divider</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w">        </span><span class="n">clk</span><span class="p">,</span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w">        </span><span class="n">rst</span><span class="p">,</span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w">        </span><span class="n">start</span><span class="p">,</span>
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w">       </span><span class="c1">// 只需保证接口信号的输入输出属性不变、位宽不变、</span>
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w">       </span><span class="c1">// 信号名不变。接口信号的数据类型可根据实际需要，</span>
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">         </span><span class="n">busy</span><span class="w">     </span><span class="c1">// 自行修改成wire型或reg型。</span>
+<span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// ****************************************************</span>
+<span class="w">    </span><span class="c1">// Delete this block of code and write your own</span>
+<span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">31</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">x_r</span><span class="p">,</span><span class="w"> </span><span class="n">y_r</span><span class="p">;</span>
+<span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">posedge</span><span class="w"> </span><span class="n">rst</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<span class="w">        </span><span class="n">busy</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rst</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">start</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">start</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+<span class="w">            </span><span class="n">x_r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">            </span><span class="n">y_r</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x_r</span><span class="p">[</span><span class="mh">31</span><span class="p">]</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">y_r</span><span class="p">[</span><span class="mh">31</span><span class="p">],</span><span class="w"> </span><span class="n">x_r</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">y_r</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span><span class="w">     </span><span class="c1">// (1)!</span>
+<span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x_r</span><span class="p">[</span><span class="mh">31</span><span class="p">],</span><span class="w"> </span><span class="n">x_r</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">y_r</span><span class="p">[</span><span class="mh">30</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span><span class="w">           </span><span class="c1">// (2)!</span>
+<span class="w">    </span><span class="c1">// ****************************************************</span>
+
+
+
+<span class="w">    </span><span class="c1">// TODO</span>
+
+
+
+<span class="k">endmodule</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>用除法符号“<code>/</code>”实现商的计算</li>
+<li>用求余符号“<code>%</code>”实现余数的计算</li>
+</ol>
+<p><center>图3-5 SoC工程中的除法器模块</center></p>
+<p>&emsp;&emsp;同学们首先需要将自己设计的8位原码除法器扩展到32位，然后替换掉图3-5所示的除法器模块，并运行功能仿真。注意，需要 <strong>将<code>divider.v</code>的第14-26行代码删除或注释掉</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">关于ALU集成除法器 <img alt="📚" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4da.svg" title=":books:" /></p>
+<p>&emsp;&emsp;整型数据在计算机硬件系统内部通常采用补码的形式进行运算和存储。因此，对于原码除法器，ALU需要先将补码形式的数据转换成原码，才能把数据提供给除法器进行运算；同理，ALU也需要先将除法器的运算结果转换成补码，才能将运算结果输出。详见<code>ALU.v</code>第36-37行，及第74-75行的代码。</p>
+</div>
+<p>&emsp;&emsp;完成除法器模块后，运行功能仿真。类似地，如图3-2所示点击“Run All”按钮。</p>
+<p>&emsp;&emsp;若除法运算出错，则TestBench将在Vivado控制台打印错误提示信息，如图3-6所示。出错时，请自行将除法器内部的信号拉到波形中进行分析和调试，具体操作如图3-1所示。</p>
+<p><center><img src="../assets/3-6.png" width = 100%></center>
+<center>图3-6 SoC工程乘除法运算的错误提示信息</center></p>
+<p>&emsp;&emsp;若顺利通过了所有测试用例，将在控制台看到测试通过的提示信息，如图3-7所示。</p>
+<p><center><img src="../assets/3-7.png" width = 500></center>
+<center>图3-7 SoC工程乘除法测试通过的提示信息</center></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2024 哈尔滨工业大学（深圳）
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.expand", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
