@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../part0/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../part2/">
+        <link rel="next" href="../verilog/part0/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.15">
     
     
       
-        <title>模块的基本结构 - 计算机组成原理实验（2024春季） | 哈工大（深圳）</title>
+        <title>Verilog代码规范 - 计算机组成原理实验（2024春季） | 哈工大（深圳）</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              模块的基本结构
+              Verilog代码规范
             
           </span>
         </div>
@@ -210,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link md-tabs__link--active">
         实验须知
       </a>
     </li>
@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../lab1/0-overview/" class="md-tabs__link">
+      <a href="../../lab1/0-overview/" class="md-tabs__link">
         实验1 从C语言到机器码
       </a>
     </li>
@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../lab2/0-overview/" class="md-tabs__link">
+      <a href="../../lab2/0-overview/" class="md-tabs__link">
         实验2 原码除法器设计
       </a>
     </li>
@@ -270,7 +270,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
@@ -330,65 +330,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         实验介绍
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../codingstyle/" class="md-nav__link">
-        Verilog代码规范
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
-          Verilog语法回顾
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_1_3">
-          <span class="md-nav__icon md-icon"></span>
-          Verilog语法回顾
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../part0/" class="md-nav__link">
-        初学Verilog的几点提醒
       </a>
     </li>
   
@@ -407,16 +350,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          模块的基本结构
+          Verilog代码规范
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        模块的基本结构
+        Verilog代码规范
       </a>
       
         
@@ -424,8 +365,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -435,37 +374,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    模块声明
+  <a href="#1" class="md-nav__link">
+    1. 命名规范
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 命名规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 文件命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    端口定义
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 模块命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    数据类型说明
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 信号命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    功能描述
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    例：2路多选器
+    2. 代码编写规范
   </a>
+  
+    <nav class="md-nav" aria-label="2. 代码编写规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 模块定义规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 参数规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 模块实例化规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 通用规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5 组合逻辑规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    2.6 时序逻辑规范
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -483,8 +476,65 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Verilog语法回顾
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Verilog语法回顾
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../part2/" class="md-nav__link">
+      <a href="../verilog/part0/" class="md-nav__link">
+        初学Verilog的几点提醒
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verilog/part1/" class="md-nav__link">
+        模块的基本结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verilog/part2/" class="md-nav__link">
         标识符和数据类型
       </a>
     </li>
@@ -498,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part3/" class="md-nav__link">
+      <a href="../verilog/part3/" class="md-nav__link">
         运算符及表达式
       </a>
     </li>
@@ -512,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part4/" class="md-nav__link">
+      <a href="../verilog/part4/" class="md-nav__link">
         逻辑门的描述
       </a>
     </li>
@@ -526,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part5/" class="md-nav__link">
+      <a href="../verilog/part5/" class="md-nav__link">
         赋值语句和块语句
       </a>
     </li>
@@ -540,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part6/" class="md-nav__link">
+      <a href="../verilog/part6/" class="md-nav__link">
         条件语句和循环语句
       </a>
     </li>
@@ -554,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../defparam/" class="md-nav__link">
+      <a href="../verilog/defparam/" class="md-nav__link">
         宏定义和参数
       </a>
     </li>
@@ -568,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part7/" class="md-nav__link">
+      <a href="../verilog/part7/" class="md-nav__link">
         模块的实例化
       </a>
     </li>
@@ -582,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_test/" class="md-nav__link">
+      <a href="../verilog/module_test/" class="md-nav__link">
         模块的测试
       </a>
     </li>
@@ -596,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../part8/" class="md-nav__link">
+      <a href="../verilog/part8/" class="md-nav__link">
         4位全加器设计实例
       </a>
     </li>
@@ -617,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operation/" class="md-nav__link">
+      <a href="../operation/" class="md-nav__link">
         实验提交说明
       </a>
     </li>
@@ -668,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/0-overview/" class="md-nav__link">
+      <a href="../../lab1/0-overview/" class="md-nav__link">
         实验概述
       </a>
     </li>
@@ -682,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/1-theory/" class="md-nav__link">
+      <a href="../../lab1/1-theory/" class="md-nav__link">
         实验原理
       </a>
     </li>
@@ -725,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/2-step0/" class="md-nav__link">
+      <a href="../../lab1/2-step0/" class="md-nav__link">
         开始之前
       </a>
     </li>
@@ -739,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/2-step1/" class="md-nav__link">
+      <a href="../../lab1/2-step1/" class="md-nav__link">
         C语言到汇编
       </a>
     </li>
@@ -753,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/2-step2/" class="md-nav__link">
+      <a href="../../lab1/2-step2/" class="md-nav__link">
         编写汇编程序
       </a>
     </li>
@@ -774,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/3-extra/" class="md-nav__link">
+      <a href="../../lab1/3-extra/" class="md-nav__link">
         附加题
       </a>
     </li>
@@ -788,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/4-submit/" class="md-nav__link">
+      <a href="../../lab1/4-submit/" class="md-nav__link">
         验收与提交
       </a>
     </li>
@@ -831,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/A-envir/" class="md-nav__link">
+      <a href="../../lab1/A-envir/" class="md-nav__link">
         A. 实验环境安装
       </a>
     </li>
@@ -845,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/B-lnxcmd/" class="md-nav__link">
+      <a href="../../lab1/B-lnxcmd/" class="md-nav__link">
         B. Linux常用命令
       </a>
     </li>
@@ -859,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab1/C-rv_ref/" class="md-nav__link">
+      <a href="../../lab1/C-rv_ref/" class="md-nav__link">
         C. RISC-V参考资料
       </a>
     </li>
@@ -917,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab2/0-overview/" class="md-nav__link">
+      <a href="../../lab2/0-overview/" class="md-nav__link">
         实验概述
       </a>
     </li>
@@ -931,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab2/1-theory/" class="md-nav__link">
+      <a href="../../lab2/1-theory/" class="md-nav__link">
         实验原理
       </a>
     </li>
@@ -945,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab2/2-step/" class="md-nav__link">
+      <a href="../../lab2/2-step/" class="md-nav__link">
         实验步骤
       </a>
     </li>
@@ -959,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab2/3-extra/" class="md-nav__link">
+      <a href="../../lab2/3-extra/" class="md-nav__link">
         附加题
       </a>
     </li>
@@ -973,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lab2/4-submit/" class="md-nav__link">
+      <a href="../../lab2/4-submit/" class="md-nav__link">
         实验提交
       </a>
     </li>
@@ -1004,8 +1054,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1014,37 +1062,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    模块声明
+  <a href="#1" class="md-nav__link">
+    1. 命名规范
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 命名规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 文件命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    端口定义
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 模块命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    数据类型说明
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 信号命名规范
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    功能描述
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    例：2路多选器
+    2. 代码编写规范
   </a>
+  
+    <nav class="md-nav" aria-label="2. 代码编写规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 模块定义规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 参数规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 模块实例化规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 通用规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5 组合逻辑规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    2.6 时序逻辑规范
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1063,65 +1165,238 @@
                   
 
 
-<h1 id="_1">模块的基本结构</h1>
-<h3 id="_2">模块声明</h3>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">module_name</span><span class="p">(</span><span class="n">port_list</span><span class="p">);</span><span class="w">      </span><span class="c1">// 模块名（端口声明列表）</span>
-</code></pre></div>
-<h3 id="_3">端口定义</h3>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">input</span><span class="w">  </span><span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sw_i</span><span class="p">;</span><span class="w">            </span><span class="c1">// 输入声明</span>
-<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="k">output</span><span class="w"> </span><span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">led_o</span><span class="p">;</span><span class="w">           </span><span class="c1">// 输出声明</span>
-<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="err">……</span>
-</code></pre></div>
-<h3 id="_4">数据类型说明</h3>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">data_r</span><span class="p">;</span><span class="w">            </span><span class="c1">// 寄存器类型声明</span>
-<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="n">WIDTH</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">cpu2ram</span><span class="p">;</span><span class="w">           </span><span class="c1">// 线网类型声明</span>
-<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="k">parameter</span><span class="w">  </span><span class="n">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">16</span><span class="mi">&#39;d32</span><span class="p">;</span><span class="w">          </span><span class="c1">// 此处声明的WID参数可在实例化IP核时传入其他值</span>
-<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="k">localparam</span><span class="w"> </span><span class="n">BASE</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">32&#39;hFFFFF000</span><span class="p">;</span><span class="w">    </span><span class="c1">// 此处声明的ABC是局部参数，不可在实例化IP时传入</span>
-<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="err">……</span>
-</code></pre></div>
-<h3 id="_5">功能描述</h3>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">assign</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="err">……</span>
-<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="k">always</span><span class="w"> </span><span class="p">@</span><span class="w"> </span><span class="p">(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk_i</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">negedge</span><span class="w"> </span><span class="n">resetn_i</span><span class="p">)</span>
-<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">resetn_i</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
-<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">        </span><span class="c1">// reset signals</span>
-<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
-<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">        </span><span class="c1">// other operations</span>
-<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="k">end</span>
-<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="k">endmodule</span>
-</code></pre></div>
-<h3 id="2">例：2路多选器</h3>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="c1">// 2选1多路选择器</span>
-<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">mux2</span><span class="w"> </span><span class="p">(</span>
-<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">  </span><span class="n">a_i</span><span class="p">,</span>
-<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">  </span><span class="n">b_i</span><span class="p">,</span>
-<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="kt">wire</span><span class="w">         </span><span class="n">sel_i</span><span class="p">,</span>
-<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">  </span><span class="n">c_o</span>
-<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="p">);</span>
-<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span>
-<span class="w"> </span><span class="mh">9</span><span class="o">|</span><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
-<span class="mh">10</span><span class="o">|</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sel_i</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
-<span class="mh">11</span><span class="o">|</span><span class="w">            </span><span class="n">c_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_i</span><span class="p">;</span><span class="w">   </span>
-<span class="mh">12</span><span class="o">|</span><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
-<span class="mh">13</span><span class="o">|</span><span class="w">            </span><span class="n">c_o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b_i</span><span class="p">;</span>
-<span class="mh">14</span><span class="o">|</span><span class="w">        </span><span class="k">end</span>
-<span class="mh">15</span><span class="o">|</span><span class="w">    </span><span class="k">end</span>
-<span class="mh">16</span><span class="o">|</span>
-<span class="mh">17</span><span class="o">|</span><span class="k">endmodule</span>
-</code></pre></div>
+  <h1>Verilog代码规范</h1>
+
+<h2 id="1">1. 命名规范</h2>
+<h3 id="11">1.1 文件命名规范</h3>
 <ul>
-<li>“模块名”是模块唯一的标识符，区分大小写。</li>
-<li>“端口列表”是由模块各个输入、输出和双向端口组成的列表（input、output、inout）。</li>
 <li>
-<p>端口用来与其它模块进行连接，括号中的列表以“,”来区分，列表的顺序没有规定，先后自由。</p>
+<p>仿真文件应使用后缀“_sim”，如modulename_sim；</p>
 </li>
 <li>
-<p>模块中用到的所有信号都必须进行数据类型的定义。</p>
+<p>测试文件应使用后缀“_tb”，如modulename_tb。</p>
 </li>
-<li>声明变量的数据类型后，不能再进行更改。</li>
-<li>在VerilogHDL中只要在使用前声明即可。</li>
-<li>声明后的变量、参数不能再次重新声明。</li>
-<li>声明后的数据使用时的配对数据必须和声明的数据类型一致。</li>
+</ul>
+<h3 id="12">1.2 模块命名规范</h3>
+<ul>
+<li>
+<p>一个文件只定义一个module；</p>
+</li>
+<li>
+<p>module名应与文件名一致；</p>
+</li>
+<li>
+<p>module名用小写英文表示。</p>
+</li>
+</ul>
+<h3 id="13">1.3 信号命名规范</h3>
+<ul>
+<li>
+<p>用小写字母定义wire、reg和input、inout、output信号；</p>
+</li>
+<li>
+<p>用大写字母定义parameter、localparam和宏定义；</p>
+</li>
+<li>
+<p>信号名应反映信号的含义/用途，不建议使用单个字母命名；</p>
+</li>
+<li>
+<p>变量名若含有多个单词，用下划线分开，如ram_addr；</p>
+</li>
+<li>
+<p>输入信号应使用后缀“_i”，如addr_i；</p>
+</li>
+<li>
+<p>输出信号应使用后缀“_o”，如data_o；</p>
+</li>
+<li>
+<p>时钟信号应使用前缀“clk”，如clk_i；</p>
+</li>
+<li>
+<p>复位信号应使用前缀“rst”，如rst_n_i；</p>
+</li>
+<li>
+<p>低电平有效的信号应使用后缀“_n”，如cs_n；</p>
+</li>
+<li>
+<p>使用降序排列定义向量有效位顺序，最低位为0。</p>
+</li>
+</ul>
+<h2 id="2">2. 代码编写规范</h2>
+<h3 id="21">2.1 模块定义规范</h3>
+<ul>
+<li>
+<p>每个模块加timescale，Vivado默认为“`timescale 1ns / 1ps”；</p>
+</li>
+<li>
+<p>一般可采用如图1、图2所示的两种写法来定义模块。建议使用如图2所示的写法。</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">(</span><span class="n">clk_i</span><span class="p">,</span><span class="w"> </span><span class="n">rst_n_i</span><span class="p">,</span><span class="w"> </span><span class="n">sel_i</span><span class="p">,</span><span class="w"> </span><span class="n">addr_i</span><span class="p">,</span><span class="w"> </span><span class="n">data_o</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rst_n_i</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">       </span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">sel_i</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">       </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">addr_i</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">data_o</span><span class="p">;</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="c1">// 模块代码</span>
+<span class="mh">11</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">12</span><span class="o">|</span>
+<span class="mh">13</span><span class="o">|</span><span class="k">endmodule</span>
+</code></pre></div>
+<center>图1 模块定义写法1</center></p>
+<p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">(</span>
+<span class="w"> </span><span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rst_n_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">4</span><span class="o">|</span>
+<span class="w"> </span><span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">       </span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">sel_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">       </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">addr_i</span><span class="p">,</span>
+<span class="w"> </span><span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">   </span><span class="n">data_o</span>
+<span class="w"> </span><span class="mh">8</span><span class="o">|</span><span class="p">);</span>
+<span class="w"> </span><span class="mh">9</span><span class="o">|</span>
+<span class="mh">10</span><span class="o">|</span><span class="w">    </span><span class="c1">// 模块代码</span>
+<span class="mh">11</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">12</span><span class="o">|</span>
+<span class="mh">13</span><span class="o">|</span><span class="k">endmodule</span>
+</code></pre></div>
+<center>图2 模块定义写法2</center></p>
+<h3 id="22">2.2 参数规范</h3>
+<ul>
+<li>
+<p>不需在模块实例化时设置的参数，应将其定义为局部参数（localparam）；</p>
+</li>
+<li>
+<p>全局参数建议放在I/O端口前面，如图3所示。</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="k">module</span><span class="w"> </span><span class="n">some_module</span><span class="w"> </span><span class="p">#(</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8</span><span class="p">,</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">PARAM2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">2</span>
+<span class="mh">4</span><span class="o">|</span><span class="p">)(</span>
+<span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">clk_i</span><span class="p">,</span>
+<span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">input</span><span class="w">               </span><span class="n">rst_n_i</span><span class="p">,</span>
+<span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="p">......</span>
+<span class="mh">8</span><span class="o">|</span><span class="p">);</span>
+</code></pre></div>
+<center>图3 全局参数规范</center></p>
+<h3 id="23">2.3 模块实例化规范</h3>
+<ul>
+<li>
+<p>模块实例应用U_xx_x表示（多次例化用序号0、1、2等表示）；</p>
+</li>
+<li>
+<p>一般可采用如图4、图5所示的两种写法来实例化模块。建议使用如图5所示的写法。</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="w">    </span><span class="n">some_module</span><span class="w"> </span><span class="n">U_some_module_0</span><span class="w"> </span><span class="p">#(</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">        </span><span class="n">clk_fpga</span><span class="p">,</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">        </span><span class="n">rst_fpga_n</span><span class="p">,</span>
+<span class="mh">4</span><span class="o">|</span><span class="w">        </span><span class="p">......</span>
+<span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<center>图4 模块实例化写法1</center></p>
+<p><div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="w">    </span><span class="n">some_module</span><span class="w"> </span><span class="n">U_some_module_0</span><span class="w"> </span><span class="p">#(</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">clk_i</span><span class="w">      </span><span class="p">(</span><span class="n">clk_fpga</span><span class="p">),</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">        </span><span class="p">.</span><span class="n">rst_n_i</span><span class="w">    </span><span class="p">(</span><span class="n">rst_fpga_n</span><span class="p">),</span>
+<span class="mh">4</span><span class="o">|</span><span class="w">        </span><span class="p">......</span>
+<span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<center>图5 模块实例化写法2</center></p>
+<h3 id="24">2.4 通用规范</h3>
+<ul>
+<li>
+<p>尽量采用参数化设计；</p>
+</li>
+<li>
+<p>所有的if语句应有与之对应的else；</p>
+</li>
+<li>
+<p>case语句应考虑default情况；</p>
+</li>
+<li>
+<p>if语句尽量不要嵌套太多；</p>
+</li>
+<li>
+<p>if-else嵌套时使用图6所示的方式，尽量不使用图7所示的方式。</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">        </span><span class="p">...</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">4</span><span class="o">|</span><span class="w">        </span><span class="p">...</span>
+<span class="mh">5</span><span class="o">|</span><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">6</span><span class="o">|</span><span class="w">        </span><span class="p">...</span>
+<span class="mh">7</span><span class="o">|</span><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<center>图6 推荐的if-else嵌套方式</center></p>
+<p><div class="highlight"><pre><span></span><code><span class="mh">1</span><span class="o">|</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">2</span><span class="o">|</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(...)</span>
+<span class="mh">3</span><span class="o">|</span><span class="w">            </span><span class="p">...</span>
+<span class="mh">4</span><span class="o">|</span><span class="w">        </span><span class="k">else</span>
+<span class="mh">5</span><span class="o">|</span><span class="w">            </span><span class="p">...</span>
+<span class="mh">6</span><span class="o">|</span><span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+<span class="mh">7</span><span class="o">|</span><span class="w">        </span><span class="p">...</span>
+<span class="mh">8</span><span class="o">|</span><span class="w">    </span><span class="k">end</span>
+</code></pre></div>
+<center>图7 不推荐的if-else嵌套方式</center></p>
+<ul>
+<li>
+<p>在RTL级代码中不能含有initial结构，也不可对任何信号进行初始化赋值。若需要初始化，应采用复位的方式；</p>
+</li>
+<li>
+<p>尽量不产生未连接的端口；</p>
+</li>
+<li>
+<p>数据位宽要匹配；</p>
+</li>
+<li>
+<p>顶层模块的输出信号必须被寄存；</p>
+</li>
+<li>
+<p>常量应标注其位宽，如1’b0；</p>
+</li>
+<li>
+<p>不要使用include、wait、forever、repeat、while等语句；</p>
+</li>
+<li>
+<p>如非必要，不使用integer类型；</p>
+</li>
+<li>
+<p>尽量不使用复杂的表达式，可以使用三目运算符“?:”。</p>
+</li>
+</ul>
+<h3 id="25">2.5 组合逻辑规范</h3>
+<ul>
+<li>尽量不使用always语句，除非需要使用case语句；</li>
+</ul>
+<h3 id="26">2.6 时序逻辑规范</h3>
+<ul>
+<li>
+<p>采用同步设计，避免使用异步逻辑（全局信号复位除外）；</p>
+</li>
+<li>
+<p>同步时序逻辑的always块中有且只有一个时钟信号，并且在同一个沿动作（如上升沿）；</p>
+</li>
+<li>
+<p>在时序always块的敏感信号列表中必须都是沿触发，不允许出现电平触发；</p>
+</li>
+<li>
+<p>敏感信号列表中不允许出现表达式；</p>
+</li>
+<li>
+<p>除异步复位之外，敏感信号列表中不允许同时出现posedge和negedge；</p>
+</li>
+<li>
+<p>时序逻辑语句块中统一使用非阻塞型赋值；</p>
+</li>
+<li>
+<p>建议一个always块只对一个变量赋值；</p>
+</li>
+<li>
+<p>建议多使用中间变量。</p>
+</li>
 </ul>
 
 
@@ -1166,10 +1441,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.expand", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.expand", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
