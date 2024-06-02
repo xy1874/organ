@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0-overview/">
+      
+      
+        <link rel="next" href="../2-step/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>实验原理 - 计算机组成原理实验（2024春季） | 哈工大（深圳）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-header__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            计算机组成原理实验（2024春季） | 哈工大（深圳）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              实验原理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到夜晚模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换到夜晚模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="切换到白天模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换到白天模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        实验须知
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../lab1/0-overview/" class="md-tabs__link">
+        实验1 从C语言到机器码
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../lab2/0-overview/" class="md-tabs__link">
+        实验2 原码除法器设计
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../0-overview/" class="md-tabs__link md-tabs__link--active">
+        实验3 高速缓存器设计
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="计算机组成原理实验（2024春季） | 哈工大（深圳）" class="md-nav__button md-logo" aria-label="计算机组成原理实验（2024春季） | 哈工大（深圳）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M384 96v224H64V96h320zM64 32C28.7 32 0 60.7 0 96v224c0 35.3 28.7 64 64 64h117.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32h256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-74.7l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48h-64zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+
+    </a>
+    计算机组成原理实验（2024春季） | 哈工大（深圳）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitee.com/hitsz-cslab/organ" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HITSZ-COMP2008
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          实验须知
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          实验须知
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        实验介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/codingstyle/" class="md-nav__link">
+        Verilog代码规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Verilog语法回顾
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Verilog语法回顾
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part0/" class="md-nav__link">
+        初学Verilog的几点提醒
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part1/" class="md-nav__link">
+        模块的基本结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part2/" class="md-nav__link">
+        标识符和数据类型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part3/" class="md-nav__link">
+        运算符及表达式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part4/" class="md-nav__link">
+        逻辑门的描述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part5/" class="md-nav__link">
+        赋值语句和块语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part6/" class="md-nav__link">
+        条件语句和循环语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/defparam/" class="md-nav__link">
+        宏定义和参数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part7/" class="md-nav__link">
+        模块的实例化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/module_test/" class="md-nav__link">
+        模块的测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/verilog/part8/" class="md-nav__link">
+        4位全加器设计实例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/operation/" class="md-nav__link">
+        实验提交说明
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          实验1 从C语言到机器码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          实验1 从C语言到机器码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/0-overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/1-theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          实验步骤
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          实验步骤
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step0/" class="md-nav__link">
+        开始之前
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step1/" class="md-nav__link">
+        C语言到汇编
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2-step2/" class="md-nav__link">
+        编写汇编程序
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/3-extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/4-submit/" class="md-nav__link">
+        验收与提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          附录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          附录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/A-envir/" class="md-nav__link">
+        A. 实验环境安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/B-lnxcmd/" class="md-nav__link">
+        B. Linux常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/C-rv_ref/" class="md-nav__link">
+        C. RISC-V参考资料
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          实验2 原码除法器设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          实验2 原码除法器设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/0-overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/1-theory/" class="md-nav__link">
+        实验原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/2-step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/3-extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/4-submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          实验3 高速缓存器设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          实验3 高速缓存器设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0-overview/" class="md-nav__link">
+        实验概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验原理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        实验原理
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 直接映射方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cache" class="md-nav__link">
+    2. 直接映射Cache结构
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 直接映射Cache结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cache" class="md-nav__link">
+    2.1 Cache存储体结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cache" class="md-nav__link">
+    2.2 Cache访问原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cache" class="md-nav__link">
+    3. Cache设计原理
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cache设计原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-cache" class="md-nav__link">
+    3.1 Cache访问的状态机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-icache" class="md-nav__link">
+    3.2 ICache接口信号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-icache" class="md-nav__link">
+    3.3 ICache工作时序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-icache" class="md-nav__link">
+    3.4 ICache和主存的存储介质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-step/" class="md-nav__link">
+        实验步骤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-extra/" class="md-nav__link">
+        附加题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-submit/" class="md-nav__link">
+        实验提交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 直接映射方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cache" class="md-nav__link">
+    2. 直接映射Cache结构
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 直接映射Cache结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cache" class="md-nav__link">
+    2.1 Cache存储体结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cache" class="md-nav__link">
+    2.2 Cache访问原理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cache" class="md-nav__link">
+    3. Cache设计原理
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cache设计原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-cache" class="md-nav__link">
+    3.1 Cache访问的状态机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-icache" class="md-nav__link">
+    3.2 ICache接口信号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-icache" class="md-nav__link">
+    3.3 ICache工作时序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-icache" class="md-nav__link">
+    3.4 ICache和主存的存储介质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">实验原理</h1>
+<p>&emsp;&emsp;存储器的访问性能很大程度上受限于物理介质。随着CPU性能的不断提高，CPU与存储器之间的速度差异越来越大，形成了“存储墙”（Memory Wall）。为缓解存储器速度对计算机系统整体性能的影响，并考虑到成本问题，现代计算机普遍使用了多级存储系统，如图2-1所示。</p>
+<p><center><img src="../assets/2-1.png" width = 550></center>
+<center>图2-1 现代计算机系统的多级存储系统</center></p>
+<p>&emsp;&emsp;高速缓存器（Cache）是现代计算机系统中常用的用于提高访存性能的缓存器。Cache的大小、结构均与主存不同，而CPU发出的访存地址均为主存地址。为使得CPU能访问Cache，需要建立主存地址与Cache地址的映射关系。常用的映射方式有全相联映射、直接映射和组相联映射。</p>
+<h2 id="1">1. 直接映射方式</h2>
+<p>&emsp;&emsp;直接映射是一种完全依据主存地址来分配存储单元在Cache中的存放位置的映射方式。在直接映射Cache中，每一个主存地址都被映射到Cache中的一个固定的位置。这种确定的映射方式使得Cache中的数据能够被快速检索，实现了较低的访问延迟。</p>
+<p>&emsp;&emsp;在直接映射Cache中，主存在逻辑上被划分成若干个区，每个区的大小等于Cache的大小，并且每个区中的所有数据块都能 <u><strong>按照其块序号</strong></u> 缓存在Cache中的对应位置。</p>
+<p>&emsp;&emsp;直接映射方式及相应的主存地址、Cache地址格式如表2-1所示。</p>
+<p><center>表2-1 主存大小为4MB、Cache大小为32KB、块大小为128B的直接映射Cache示例</center>
+<center><img src="../assets/t2-1.png" width = 550></center></p>
+<p>&emsp;&emsp;由表2-1可知，主存地址在逻辑上被划分成 <u><strong>区号</strong></u>、<u><strong>区内块号</strong></u> 和 <u><strong>块内偏移地址</strong></u> 三部分。其中，区号用于记录数据块的主存地址信息，<u><strong>在访问Cache时作为块标签使用</strong></u>；区内块号用于在Cache中检索数据块；块内偏移地址则用于从Cache块中取出CPU所需的数据。Cache地址则仅由块序号和块内偏移地址组成。</p>
+<div class="admonition info">
+<p class="admonition-title">主存的地址分解 <img alt="📚" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4da.svg" title=":books:" /></p>
+<p>&emsp;&emsp;在表2-1所示的示例中，主存大小为4MB，Cache大小为32KB，数据块大小为128B，故可知：</p>
+<p>&emsp;&emsp;（1）主存地址位宽是22bit；<br />
+&emsp;&emsp;（2）Cache地址位宽是15bit<br />
+&emsp;&emsp;（3）块内地址位宽是7bit；</p>
+<p>&emsp;&emsp;已知Cache地址由块号和块内地址组成，故块号的位宽等于Cache地址位宽减去块内地址位宽，即15bit - 7bit = 8bit。</p>
+<p>&emsp;&emsp;类似地，主存地址中，区号的位宽等于主存地址位宽减去块号位宽和块内地址位宽，即22bit - 8bit - 7bit = 7bit。</p>
+</div>
+<p>&emsp;&emsp;事实上，表2-1左侧的Cache仅描述Cache的数据缓存部分。为实现Cache数据块的访问，通常需要为每个数据块添加有效位（valid）和标签（tag）等辅助信息。</p>
+<h2 id="2-cache">2. 直接映射Cache结构</h2>
+<h3 id="21-cache">2.1 Cache存储体结构</h3>
+<p>&emsp;&emsp;Cache存储体的典型结构如图2-2所示。</p>
+<p><center><img src="../assets/2-2.png" width = 320></center>
+<center>图2-2 Cache存储体结构</center></p>
+<p>&emsp;&emsp;由图2-2可知，Cache存储体由有效位（valid）、标签（tag）和数据（data）三部分组成：</p>
+<ul>
+<li>
+<p><strong>有效位（valid）</strong>：表示当前Cache块是否有效 —— “有效”指的是Cache块的数据是否可用。<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;初始状态下，所有Cache块均为无效，当内存中的数据块装入了Cache后，<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;该Cache块的数据将变成有效的。</p>
+</li>
+<li>
+<p><strong>标签（tag）</strong>&emsp;&ensp;：表示Cache块所存储数据的主存地址信息。Cache的容量远小于主存，因此<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;多个主存数据块将被映射到同一个Cache块。为了加以区分，需将主存地址<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;中的区号作为块标签记录在Cache中。</p>
+</li>
+<li>
+<p><strong>数据（data）</strong>&emsp;：存储被装入的主存数据块。一个数据块包含多个地址连续的存储单元。</p>
+</li>
+</ul>
+<h3 id="22-cache">2.2 Cache访问原理</h3>
+<p>&emsp;&emsp;访问Cache的电路原理如图2-3所示。</p>
+<p><center><img src="../assets/2-3.png" width = 350></center>
+<center>图2-3 访问直接映射Cache的电路原理图</center></p>
+<p>&emsp;&emsp;在图2-3中，访问直接映射Cache的基本过程是：</p>
+<p>&emsp;&emsp;（1）<strong>地址划分</strong>：将主存地址划分成块标签（即表2-1中的区号）、块号、块内偏移3个字段；</p>
+<p>&emsp;&emsp;（2）<strong>Cache块寻址</strong>：使用主存地址的块号作为索引访问Cache存储体，取出一个Cache块；</p>
+<p>&emsp;&emsp;（3）<strong>命中判断</strong>：判断取出的Cache块是否有效，并判断Cache块中的tag是否等于主存地址的<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;块标签；若两个条件均为真，则表示Cache命中，否则表示Cache缺失；</p>
+<p>&emsp;&emsp;（4）<strong>取出数据</strong>：使用主存地址的块内偏移从Cache块的数据域中取出相应的数据单元，<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;并将数据单元返回给CPU；在本实验中，每个数据单元均是32位的字；</p>
+<p>&emsp;&emsp;（5）<strong>缺失处理</strong>：若Cache缺失，则Cache将<u>以当前的主存地址</u>通过总线<u>向主存发出读请求</u>，<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;并将主存返回的数据块，连同<u>有效位</u>和当前<u>主存地址的块标签</u>，形成新的<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Cache块，并将其存储到Cache存储体中，最后将读取的数据返回给CPU。</p>
+<p>&emsp;&emsp;Cache的访问过程具有一定的逻辑先后顺序关系，并且访问过程还需判断命中信号的取值从而决定后续的操作。在工程实践中，具有类似特点的电路均可使用状态机实现。</p>
+<h2 id="3-cache">3. Cache设计原理</h2>
+<h3 id="31-cache">3.1 Cache访问的状态机</h3>
+<p>&emsp;&emsp;分析2.2节所述的Cache访问过程，不难设计出类似于图2-4所示的Cache访问状态机。</p>
+<p><center><img src="../assets/2-4.png" width = 300></center>
+<center>图2-4 直接映射Cache的读访问状态机</center></p>
+<p>&emsp;&emsp;图2-4所示的状态机具有3个状态：</p>
+<ul>
+<li>
+<p><strong>IDLE</strong> 状态：&emsp;&emsp;&emsp;&ensp; 等待CPU的访问请求，并在收到请求后进入TAG_CHECK状态。<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在该状态下，Cache需要给各个信号赋默认值。</p>
+</li>
+<li>
+<p><strong>TAG_CHECK</strong> 状态： 判断CPU的访问请求是否命中。若命中，返回数据并回到IDLE状态；<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;若缺失，则进入REFILL状态以重填相应的Cache块。</p>
+</li>
+<li>
+<p><strong>REFILL</strong> 状态：&emsp;&emsp;&ensp;  以CPU的访存地址向总线发出读请求，并在接收到主存返回的数据后，<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;回到TAG_CHECK状态。</p>
+</li>
+</ul>
+<p>&emsp;&emsp;实际在设计Cache的状态机时，需要结合具体工程中的模块和时序要求，对图2-4所示的状态机进行相应的调整。在此基础上，进一步分析Cache访问过程，得出每个状态下的输入输出信号，最后再使用数字逻辑实验中的“三段式”实现状态机即可。</p>
+<h3 id="32-icache">3.2 ICache接口信号</h3>
+<p>&emsp;&emsp;本实验与上一个实验使用同一个SoC工程。在SoC中，Cache一方面需要接收和处理CPU的访问请求，另一方面需要通过总线访问主存储器，如图2-5所示。</p>
+<p><center><img src="../assets/2-5.png" width = 320></center>
+<center>图2-5 SoC中的Cache</center></p>
+<p>&emsp;&emsp;由图2-5可知，Cache的接口信号可分为两组，一组是面向CPU的接口信号，另一组是面向总线的接口信号。特别地，ICache对CPU是只读的，其接口信号如表2-2所示。</p>
+<p><center>表2-2 ICache模块接口信号</center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">名称</th>
+<th align="center">位宽</th>
+<th align="center">属性</th>
+<th align="center">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center"><code>cpu_clk</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输入</td>
+<td align="center">时钟信号</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><code>cpu_rst</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输入</td>
+<td align="center">复位信号（高电平复位）</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"><code>inst_rreq</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输入</td>
+<td align="center">取指请求信号：高电平表示CPU需要取指</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center"><code>inst_addr</code></td>
+<td align="center"><code>32</code></td>
+<td align="center">输入</td>
+<td align="center">取指的地址</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center"><code>inst_valid</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输出</td>
+<td align="center">指令是否有效/ICache命中信号</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center"><code>inst_out</code></td>
+<td align="center"><code>32</code></td>
+<td align="center">输出</td>
+<td align="center">取到的指令</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center"><code>mem_rrdy</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输入</td>
+<td align="center">就绪信号：高电平表示内存就绪</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center"><code>mem_ren</code></td>
+<td align="center"><code>4</code></td>
+<td align="center">输出</td>
+<td align="center">向内存读数据的掩码/读使能信号</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center"><code>mem_raddr</code></td>
+<td align="center"><code>32</code></td>
+<td align="center">输出</td>
+<td align="center">向内存发出的读地址</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center"><code>mem_rvalid</code></td>
+<td align="center"><code>1</code></td>
+<td align="center">输入</td>
+<td align="center">读内存的数据有效信号</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center"><code>mem_rdata</code></td>
+<td align="center"><code>128</code></td>
+<td align="center">输入</td>
+<td align="center">从内存读取的数据块</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>&emsp;&emsp;在表2-2中，前缀为“<code>inst_</code>”的信号是ICache面向CPU的接口信号；前缀为“<code>mem_</code>”的信号则是ICache面向总线的接口信号。</p>
+<p>&emsp;&emsp;ICache面向CPU的接口信号时序如图2-6所示。</p>
+<p><center><img src="../assets/2-6.png" width = 610></center>
+<center>图2-6 ICache面向CPU的接口信号时序</center></p>
+<div class="admonition info">
+<p class="admonition-title">时序解读 <img alt="🧑‍🏫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-200d-1f3eb.svg" title=":teacher:" /></p>
+<ul>
+<li>【<em>clk0</em>】CPU需要取指时拉高<code>inst_req</code>信号，同时给出指令地址<code>inst_addr</code>。  </li>
+<li>【<em>clk1</em>】<code>inst_req</code>信号 <strong>仅有效一个时钟周期</strong>，但<code>inst_addr</code>信号将保持不变直到CPU发出下一个取指请求。  </li>
+<li>【<em>clk2</em>】ICache在命中或处理完缺失后，向CPU发出命中信号<code>inst_valid</code>和指令编码<code>inst_out</code>。  </li>
+<li>【<em>clk3</em>】<code>inst_valid</code>和<code>inst_out</code><strong>仅有效一个时钟周期</strong>。  </li>
+<li>【<em>clk4</em>】<code>inst_valid</code>恢复低电平后，若CPU有新的取指请求，将继续拉高<code>inst_req</code>信号。</li>
+</ul>
+</div>
+<p>&emsp;&emsp;ICache面向总线的接口信号时序如图2-7所示。</p>
+<p><center><img src="../assets/2-7.png" width = 620></center>
+<center>图2-7 ICache面向总线的接口信号时序</center></p>
+<div class="admonition info">
+<p class="admonition-title">时序解读 <img alt="🧑‍🏫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-200d-1f3eb.svg" title=":teacher:" /></p>
+<ul>
+<li>【<em>clk0</em>】总线就绪后，拉高<code>mem_rrdy</code>信号。<strong>只有当<code>mem_rrdy</code>信号有效时，ICache才能发出读访存请求。</strong>  </li>
+<li>【<em>clk1</em>】ICache检测到<code>mem_rrdy</code>信号有效后，向总线发出读使能信号<code>mem_ren</code>和读地址信号<code>mem_raddr</code>。<br />
+&emsp;&emsp;&emsp;&ensp; 对于ICache，<strong><code>mem_ren</code>信号的取值只可能是<code>4'b0000</code>或<code>4'b1111</code></strong>。     </li>
+<li>【<em>clk2</em>】读使能信号<code>mem_ren</code>和读地址信号<code>mem_raddr</code><strong>仅有效一个时钟周期</strong>。</li>
+<li>【<em>clk3</em>】总线模块接收到ICache的读请求后，在一个时钟周期后拉低<code>mem_rrdy</code>信号，并开始读主存。  </li>
+<li>【<em>clk4</em>】总线读内存完毕后，拉高<code>mem_rvalid</code>信号并返回读取的数据<code>mem_rdata</code>，同时拉高<code>mem_rrdy</code>信号。  </li>
+<li>【<em>clk5</em>】<code>mem_rvalid</code>信号 <strong>仅有效一个时钟周期</strong>。</li>
+</ul>
+</div>
+<h3 id="33-icache">3.3 ICache工作时序</h3>
+<p>&emsp;&emsp;综合图2-4所示的状态机，以及图2-6和图2-7所示的ICache接口时序，可得如图2-8所示的ICache工作时序图。</p>
+<p><center><img src="../assets/2-8.png" width = 100%></center>
+<center>图2-8 ICache工作时序</center></p>
+<div class="admonition info">
+<p class="admonition-title">时序解读 <img alt="🧑‍🏫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-200d-1f3eb.svg" title=":teacher:" /></p>
+<p>（1）命中时（clk0 ~ clk2）<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk0</em>】CPU向ICache发出取指请求（拉高<code>inst_req</code>信号，同时给出指令地址<code>inst_addr</code>）。ICache接收到<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;取指请求后，将从<code>IDLE</code>状态转移到<code>TAG_CHECK</code>状态。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk1</em>】ICache在<code>TAG_CHECK</code>状态下判断命中，故拉高<code>inst_valid</code>信号，同时输出指令给CPU。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk2</em>】ICache拉低<code>inst_valid</code>信号，代表当前取指请求已处理完毕。此时ICache回到<code>IDLE</code>状态。</p>
+<p>（2）缺失时（clk3 ~ clk10）<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk3</em>】CPU向ICache发出取指请求。ICache接收到取指请求后，将从<code>IDLE</code>状态转移到<code>TAG_CHECK</code>状态。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk4</em>】ICache在<code>TAG_CHECK</code>状态下判断不命中，需要通过总线读取主存数据，从而重填Cache块。此时ICache<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;将从<code>TAG_CHECK</code>状态转移到<code>REFILL</code>状态。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk5~7</em>】在<code>REFILL</code>状态下，ICache等待主存就绪（即<code>mem_rrdy</code>信号有效）之后，向主存发出读请求（读使能<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<code>mem_ren</code>和读地址<code>mem_raddr</code>）。此时，ICache将停留在<code>REFILL</code>状态从而等待主存返回数据。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk8</em>】总线返回被读取的主存数据块。ICache检测到<code>mem_rvalid</code>有效后，读取<code>mem_rdata</code>上的数据块，添加<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;有效位和块标签，形成新的Cache块，并将其存储到ICache的存储体中。此时，ICache将从<code>REFILL</code>状态<br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;回到<code>TAG_CHECK</code>状态。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk9</em>】ICache在<code>TAG_CHECK</code>状态下判断命中，故拉高<code>inst_valid</code>信号，同时输出指令给CPU。<br />
+&emsp;&emsp;<strong>·</strong>【<em>clk10</em>】当前取指请求已处理完毕，此时ICache回到<code>IDLE</code>状态。</p>
+</div>
+<h3 id="34-icache">3.4 ICache和主存的存储介质</h3>
+<p>&emsp;&emsp;本实验使用Block Memory作为ICache和主存的物理存储介质。Block Memory是FPGA内部的分散到各个可编程逻辑区域的微型存储器，具有访问速度快、容量较大、不占用额外可编程逻辑资源等优点。</p>
+<p>&emsp;&emsp;在现代计算机系统中，主存通常采用DRAM作为存储介质，而Cache则一般采用速度更高但价格更贵的SRAM存储介质。SRAM的访问速度通常是DRAM的数十倍甚至上百倍。本实验通过给主存模块添加随机访问延迟来模拟主存和Cache之间的访问速度差异。</p>
+<p>&emsp;&emsp;通过在HDL工程中创建并实例化“Block Memory Generator” IP核，即可使用FPGA片内的Block Memory存储资源。在本实验中，ICache模块已经完成了此IP核的创建和实例化（详见<a href="../2-step/#1" target=_blank>实验步骤 - 1.操作步骤&ensp;之（3）</a>）。</p>
+<p>&emsp;&emsp;Block Memory的接口信号如表2-3所示。</p>
+<p><center>表2-3 Block Memory IP核的接口信号</center>
+<center></p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">名称</th>
+<th align="center">属性</th>
+<th align="center">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center"><code>clka</code></td>
+<td align="center">输入</td>
+<td align="center">时钟信号</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"><code>addra</code></td>
+<td align="center">输入</td>
+<td align="center">地址信号（读、写共用）</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"><code>wea</code></td>
+<td align="center">输入</td>
+<td align="center">写使能信号</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center"><code>dina</code></td>
+<td align="center">输入</td>
+<td align="center">写数据信号</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center"><code>douta</code></td>
+<td align="center">输出</td>
+<td align="center">读数据信号</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>&emsp;&emsp;Block Memory的读写时序如图2-9所示。</p>
+<p><center><img src="../assets/2-9.png" width = 420></center>
+<center>图2-9 Block Memory IP核的读写时序</center></p>
+<div class="admonition info">
+<p class="admonition-title">时序解读 <img alt="🧑‍🏫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-200d-1f3eb.svg" title=":teacher:" /></p>
+<ul>
+<li>【<em>clk0、clk2</em>】时钟上升沿在<code>addra</code>端口给出读地址，并在下一个时钟从<code>douta</code>端口读取数据。<strong>读操作时，写使能</strong><br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>信号wea需为低电平。</strong>  </li>
+<li>【<em>clk1</em>】&emsp;&emsp;&ensp; 时钟上升沿在<code>addra</code>端口给出写地址，拉高写使能信号<code>wea</code>，同时在<code>dina</code>端口给出写数据。<strong>写使</strong><br />
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<strong>能信号<code>wea</code>仅有效一个时钟</strong>。此外，进行写操作时，<strong><code>douta</code>端口将在下一个时钟输出写数据的值</strong>。</li>
+</ul>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2024 哈尔滨工业大学（深圳）
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.expand", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

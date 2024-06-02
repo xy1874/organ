@@ -99,12 +99,12 @@ nav:
     - 实验步骤: lab2/2-step.md
     - 附加题: lab2/3-extra.md
     - 实验提交: lab2/4-submit.md
-  # - 实验3 高速缓存器设计:
-  #   - 实验概述: lab3/0-overview.md
-  #   - 实验原理: lab3/1-theory.md
-  #   - 实验步骤: lab3/2-step.md
-  #   - 附加题: lab3/3-extra.md
-  #   - 实验提交: lab3/4-submit.md
+  - 实验3 高速缓存器设计:
+    - 实验概述: lab3/0-overview.md
+    - 实验原理: lab3/1-theory.md
+    - 实验步骤: lab3/2-step.md
+    - 附加题: lab3/3-extra.md
+    - 实验提交: lab3/4-submit.md
   # - 实验4* AXI总线接口设计:
   #   - 实验概述: lab4/overview.md
   #   - 实验原理: lab4/theory.md
