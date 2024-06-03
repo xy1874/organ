@@ -180,6 +180,8 @@ endmodule
     <center><img src="../assets/3-3.png" width = 100%></center>
     <center>图3-3 一键升级所有IP核</center>
 
+    &emsp;&emsp;若升级IP核失败，请检查Vivado工程所在的路径是否有中文、空格，或路径是否过长。
+
 
 ### 2.3 运行功能仿真
 
