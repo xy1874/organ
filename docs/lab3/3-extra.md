@@ -52,14 +52,14 @@
 | 12 | `dev_waddr` | `32` | 输出 | 向设备发出的写地址 |
 | 13 | `dev_wdata` | `32` | 输出 | 向设备发出的写数据 |
 | 14 | `dev_rrdy` | `1` | 输入 | 设备读就绪信号：高电平表示就绪 |
-| 15 | `dev_ren` | `4` | 输出 | 读使能信号（**支持读字、半字、字节**） |
+| 15 | `dev_ren` | `4` | 输出 | 读使能信号 |
 | 16 | `dev_raddr` | `32` | 输出 | 向设备发出的读地址 |
 | 17 | `dev_rvalid` | `1` | 输入 | 读设备的数据有效信号 |
 | 18 | `dev_rdata` | `128` | 输入 | 从设备读取的数据块 |
 
 </center>
 
-&emsp;&emsp;DCache模块的读接口时序与ICache类似，故此处不再赘述，详见<a href = "../1-theory/#32-icache" target = _blank>实验原理 - 3.2 ICache接口信号</a>中的图2-6和图2-7。特别地，对于读访问操作，<u>DCache与ICache的区别是支持通过4bit的读使能信号`data_ren`和`dev_ren`实现按字节、半字或字读取的功能</u>。
+&emsp;&emsp;DCache模块的读接口时序与ICache类似，故此处不再赘述，详见<a href = "../1-theory/#32-icache" target = _blank>实验原理 - 3.2 ICache接口信号</a>中的图2-6和图2-7。特别地，对于读访问操作，<u>DCache与ICache的区别是支持通过4bit的读使能信号`data_ren`实现按字节、半字或字读取的功能</u> —— 使能信号的第x位对应32位存储字的第x个字节。
 
 &emsp;&emsp;DCache模块面向CPU的写接口时序如图4-1所示。
 
