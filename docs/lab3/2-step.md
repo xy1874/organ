@@ -163,6 +163,19 @@ endmodule
 <center><img src="../assets/3-1.png" width = 400></center>
 <center>图3-1 更改仿真的顶层模块为`soc_simu.v`</center>
 
+!!! note "关于Vivado <font color=red><u>2022</u></font> 或 <font color=red><u>2023</u></font> 的版本 :warning:"
+    &emsp;&emsp;如果使用Vivado 2022，需将`soc_simu.v`第25行修改为：
+
+    ``` Verilog linenums="1"
+    `define MEM_INST DUT.U_mem.U_bram.inst.axi_mem_module.blk_mem_gen_v8_4_5_inst.memory
+    ```
+
+    &emsp;&emsp;如果使用Vivado 2023，需将`soc_simu.v`第25行修改为：
+
+    ``` Verilog linenums="1"
+    `define MEM_INST DUT.U_mem.U_bram.inst.axi_mem_module.blk_mem_gen_v8_4_7_inst.memory
+    ```
+
 ### 2.2 测试程序设置
 
 &emsp;&emsp;在Sources窗口下依次找到并展开`soc.v`和`axiram_wrap.v`模块，双击打开存储主存数据的`blk_mem_gen_0`IP核，将`Other Options`下的初始文件更换成`start.dump.coe`，如图3-2所示。
