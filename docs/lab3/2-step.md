@@ -163,14 +163,20 @@ endmodule
 <center><img src="../assets/3-1.png" width = 400></center>
 <center>图3-1 更改仿真的顶层模块为`soc_simu.v`</center>
 
-!!! note "关于Vivado <font color=red><u>2022</u></font> 或 <font color=red><u>2023</u></font> 的版本 :warning:"
-    &emsp;&emsp;如果使用Vivado 2022，需将`soc_simu.v`第25行修改为：
+!!! note "关于使用Vivado 2018.3以上的版本 :warning:"
+    &emsp;&emsp;如果使用Vivado <font color=#3498DB><u>**2019**</u></font>，需将`soc_simu.v`第25行修改为：
+
+    ``` Verilog linenums="1"
+    `define MEM_INST DUT.U_mem.U_bram.inst.axi_mem_module.blk_mem_gen_v8_4_4_inst.memory
+    ```
+
+    &emsp;&emsp;如果使用Vivado <font color=#3498DB><u>**2022**</u></font>，需将`soc_simu.v`第25行修改为：
 
     ``` Verilog linenums="1"
     `define MEM_INST DUT.U_mem.U_bram.inst.axi_mem_module.blk_mem_gen_v8_4_5_inst.memory
     ```
 
-    &emsp;&emsp;如果使用Vivado 2023，需将`soc_simu.v`第25行修改为：
+    &emsp;&emsp;如果使用Vivado <font color=#3498DB><u>**2023**</u></font>，需将`soc_simu.v`第25行修改为：
 
     ``` Verilog linenums="1"
     `define MEM_INST DUT.U_mem.U_bram.inst.axi_mem_module.blk_mem_gen_v8_4_7_inst.memory
